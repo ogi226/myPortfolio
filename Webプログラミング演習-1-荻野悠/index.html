@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>デザインハウスリノベーションWEBサイト</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;500;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header id="header">
+        <nav class="menu">
+            <img class="logo" src="images/header_logo.svg" alt="企業ロゴ">
+            <input type="checkbox" class="menu_btn" id="menu_btn">
+            <label class="burger" for="menu_btn">
+                <span class="navicon"></span>
+            </label>
+            <ul class="menu_list">
+                <li><a href="#concept">コンセプト</a></li>
+                <li><a href="#service">サービス</a></li>
+                <li><a href="#flow">施工の流れ</a></li>
+                <li><a href="#question">よくあるご質問</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <h1>
+            <img class="hero sp" src="images/sp_main_hero.png" alt="スマホ用ダイニングの写真">
+            <img class="hero pc" src="images/pc_main_hero.png" alt="PC用ダイニング写真">
+        </h1>
+
+        <section class="section" id="concept">
+            <h2 class="sec_title">concept</h2>
+            <p class="subtitle"><span class="sbt_line"></span><span class="sub">コンセプト</span><span
+                    class="sbt_line"></span></p>
+            <div class="section_innerwrap">
+                <h3>家族が笑顔になれる場所</h3>
+                <p class="comment">家族が集う、温かく居心地の良い空間づくりを目指して、幅広い年代の方に安心して過ごしていただける空間づくりや、お手入れのしやすい素材を使用したリフォームをご提案いたします。
+                </p>
+            </div><!-- section_innerwrap -->
+        </section>
+
+        <section class="section" id="service">
+            <h2 class="sec_title">service</h2>
+            <p class="subtitle service"><span class="sbt_line"></span><span class="sub">サービス</span><span
+                    class="sbt_line"></span></p>
+            <div class="section_innerwrap">
+                <div class="Bathroom">
+                    <img src="images/main_list-1-img.png" alt="浴室の写真">
+                    <dl class="service_menu">
+                        <dt>浴室</dt>
+                        <dd>ご家族が一緒に入れる広めの浴槽や手すり等、安全性に配慮しています。</dd>
+                    </dl>
+                    <p class="more"><a href="#">more</a></p>
+                </div>
+
+                <div class="living">
+                    <img src="images/main_list-2-img.png" alt="リビングの写真">
+                    <dl class="service_menu">
+                        <dt>リビング</dt>
+                        <dd>照明や家具の配置等、くつろぎやすい空間づくりを大切にしています。</dd>
+                    </dl>
+                    <p class="more"><a href="#">more</a></p>
+                </div>
+
+                <div class="kitchen">
+                    <img src="images/main_list-3-img.png" alt="キッチンの写真">
+                    <dl class="service_menu">
+                        <dt>キッチン</dt>
+                        <dd>機能性だけでなく、デザイン性にもこだわっております。</dd>
+                    </dl>
+                    <p class="more"><a href="#">more</a></p>
+                </div>
+                <!-- </div> inner_wrap -->
+            </div><!-- section_innerwrap -->
+        </section>
+
+        <section class="section" id="flow">
+            <h2 class="sec_title">flow</h2>
+            <p class="subtitle service"><span class="sbt_line"></span><span class="sub">施工の流れ</span><span
+                    class="sbt_line"></span></p>
+            <div class="section_innerwrap">
+                <ul class="flow_detail">
+                    <li class="flow_item">
+                        <p class="flow_text">ご相談</p>
+                    </li>
+                    <li class="yajirusi"></li>
+                    <li class="flow_item">
+                        <p class="flow_text">現地調査</p>
+                    </li>
+                    <li class="yajirusi"></li>
+                    <li class="flow_item">
+                        <p class="flow_text">お見積り</p>
+                    </li>
+                    <li class="yajirusi"></li>
+                    <li class="flow_item">
+                        <p class="flow_text">ご契約</p>
+                    </li>
+                    <li class="yajirusi"></li>
+                    <li class="flow_item">
+                        <p class="flow_text">施工</p>
+                    </li>
+                    <li class="yajirusi"></li>
+                    <li class="flow_item">
+                        <p class="flow_text">お引渡し</p>
+                    </li>
+                    <li class="yajirusi"></li>
+                </ul>
+            </div><!-- section_innerwrap -->
+        </section>
+
+        <section class="section" id="question">
+            <h2 class="sec_title">q&a</h2>
+            <p class="subtitle service"><span class="sbt_line"></span><span class="sub">よくあるご質問</span><span
+                    class="sbt_line"></span></p>
+            <dl class="qa_contents">
+                <dt class="q_wrap">
+                    <span class="qa_icon q">Q.</span>
+                    <span class="question">見積もりは無料ですか？</span>
+                </dt>
+
+                <dd class="a_wrap">
+                    <span class="qa_icon a">A.</span>
+                    <span class="answer answer1">はい。お見積りは無料で承っております。
+                        ホームページよりお気軽にお問い合わせ下さい。</span>
+                </dd>
+
+                <dt class="q_wrap">
+                    <span class="qa_icon q">Q.</span>
+                    <span class="question">普段通り生活をしながらリフォーム工事は可能ですか？</span>
+                </dt>
+
+                <dd class="a_wrap">
+                    <span class="qa_icon a">A.</span>
+                    <span class="answer">
+                        はい。もちろん可能です。工事中の箇所は、何日間か使用できなくなる場合もございますのであらかじめご了承ください。大型リフォームの場合には、仮住まいもお薦めしております。
+                    </span>
+                </dd>
+            </dl>
+        </section>
+
+        <section class="section" id="contact">
+            <h2 class="sec_title">contact</h2>
+            <p class="subtitle service"><span class="sbt_line"></span><span class="sub">お問い合わせ</span><span
+                    class="sbt_line"></span></p>
+            <form>
+                <div class="contact_inner_wrap">
+                    <label class="contact_item contact_type_item">
+                        <span class="contact_label">お問い合わせ種別<span>必須</span></span>
+                    </label>
+                    <div class="contact_body radio_grp">
+                        <label class="radio_type"><input class="contact_type" type="radio" name="contact_type"
+                                value="資料請求" required>資料請求</label>
+                        <label class="radio_type"><input class="contact_type" type="radio" name="contact_type"
+                                value="ご相談" required>ご相談</label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">お名前<span>必須</span></p>
+                    </div>
+                    <div class="contact_body">
+                        <label><input class="name" type="text" name="user_name" required></label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">フリガナ<span>必須</span></p>
+                    </div>
+                    <div class="contact_body">
+                        <label><input type="text" name="furigana" required></label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">電話番号<span>必須</span></p>
+                    </div>
+                    <div class="contact_body">
+                        <label><input type="text" name="tel" required></label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">住所<span>必須</span></p>
+                    </div>
+                    <div class="contact_body">
+                        <div class="postal_code_wrap">
+                            <p class="contact_label">〒</p>
+                            <label><input class="postal_code" type="text" name="postal_code" minlength="7" maxlength="8"
+                                    pattern="\d*" autocomplete="shipping postal-code" required></label>
+                        </div>
+                        <label><input type="text" name="address" required></label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">メールアドレス<span>必須</span></p>
+                    </div>
+                    <div class="contact_body">
+                        <label><input type="email" name="user_email" required></label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">メールアドレス(確認用)<span>必須</span></p>
+                    </div>
+                    <div class="contact_body">
+                        <label><input type="email" name="user_email" required></label>
+                    </div>
+
+                    <div class="contact_item">
+                        <p class="contact_label">お問い合わせ内容</p>
+                    </div>
+                    <div class="contact_body">
+                        <textarea class="inquiry" name="inquiry"></textarea>
+                    </div>
+                </div>
+
+                <div class="submit">
+                    <label>
+                        <input class="submit_btn" type="submit" value="入力内容を確認する"><span></span>
+                    </label>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="pagetop_icon">
+            <a href="#">
+                <p class="pagetop"></p>
+            </a>
+        </div>
+        <p class="copytright"><small>&copy; Design House Renovations</small></p>
+
+    </footer>
+
+
+</body>
+
+</html>

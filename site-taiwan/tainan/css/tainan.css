@@ -1,0 +1,385 @@
+@charset "utf-8";
+
+/* モバイル版css記述 */
+/* ヘッダー部分 */
+.header {
+  background: url(../image/nan_hero_sp.png) center/cover no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ヘッダーここまで */
+/* メインここから */
+body {
+  background-color: #f4f4f4;
+}
+main {
+  padding: 8px 8px 0 8px;
+}
+
+.section1,
+.section2,
+.section3 {
+  padding: 40px 31px 60px 31px;
+}
+
+/* パンくずメニューのフレックス と下線部の色を変更*/
+ol {
+  display: flex;
+}
+
+.pankuzu_top {
+  margin-right: 4px;
+  text-decoration: underline solid #cce5df;
+}
+
+/* sp＝スマートフォン見出し */
+h2,
+h3 {
+  text-align: center;
+}
+p {
+  margin-right: auto;
+  margin-left: auto;
+  text-align: justify;
+  padding: 16px 20px;
+  margin-bottom: 40px;
+}
+
+.section1 h2 {
+  margin-bottom: 40px;
+}
+.section1 .h3 {
+  font-size: 24px;
+  margin: 48px 0px 20px;
+}
+
+img {
+  margin: 0 auto;
+  text-align: center;
+  margin: 30px 1px;
+}
+
+.tainan_region {
+  font-size: clamp(24px, 2.6vw, 36px);
+  width: 31.4vw;
+  font-weight: bold;
+  text-align-last: justify;
+  margin-left: auto;
+  margin-right: auto;
+  /* margin: 120px 0px 20px; */
+}
+.tainan_info1 {
+  background-color: #d7ebe2;
+  font-size: 12px;
+  padding: 20px 16px;
+}
+
+.tainan_info2 {
+  background-color: #d7ebe2;
+  font-size: 12px;
+  padding: 20px 16px;
+  text-align: center;
+}
+.tainan_info2 span {
+  font-weight: bold;
+}
+.attraction_box2 {
+  position: relative;
+  margin-bottom: 120px;
+}
+.attraction_box2::after {
+  content: "";
+  position: absolute;
+  width: 76%;
+  height: 1px;
+  background-color: #000;
+  left: 12%;
+  bottom: -60px;
+}
+.attraction_box3 {
+  margin-top: 20px;
+}
+.amp_sub {
+  display: flex;
+  justify-content: space-between;
+}
+.amp_sub img,
+.aka_sub img {
+  max-width: 47%;
+  width: 47%;
+  aspect-ratio: 140/152;
+  object-fit: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.aka_sub {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 画像を見る */
+.look_pic {
+  display: block;
+  width: 40%;
+  margin-left: auto;
+  text-align: right;
+  border: 2px solid #eda184;
+  padding: 0.5em 1.5em;
+}
+.look_pic p {
+  padding: 0;
+  text-align: center;
+}
+.section2 li {
+  margin-bottom: 40px;
+}
+.look_pic span {
+  color: #eda184;
+}
+/* グルメ紹介文上下線 */
+
+/* グルメ下側の紹介文 */
+.section2 .gour,
+.section3 .lotus {
+  width: 60vw;
+  padding-left: 0;
+  padding-right: 0;
+  margin: 40px auto;
+  display: block;
+
+  /* 紹介文の上下幅を広げたいのです。 */
+}
+
+.section2 h3 {
+  font-size: 24px;
+  line-height: 1;
+}
+/* グルメ料理名の下側ルビを修飾 */
+.section2 .rubi {
+  text-align: center;
+  margin-top: -0.5em;
+  padding: 0 16px;
+}
+.section2 img {
+  margin: 12px 0;
+}
+.section2 p {
+  padding-left: 0;
+  padding-right: 0;
+  margin: 1px 0;
+}
+
+/* セクション２開始  */
+.section2 ul {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* 癒しスポット紹介文上下線 */
+
+.hasu_box1 p,
+.hasu_box2 p {
+  padding: 0;
+  margin-top: -10px;
+  margin-bottom: 20px;
+}
+
+/* メインここまで */
+
+/* モーダルのCSS */
+.modal_style {
+  background-color: #fff;
+}
+
+.modal_style img {
+  width: 74.6%;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* pcサイトCSS */
+@media screen and (min-width: 800px) {
+  .whole {
+    padding-top: 20px;
+    padding-bottom: 70px;
+    max-width: 1200px;
+    width: 87.6vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  p {
+    font-size: clamp(12px, 1.5vw, 20px);
+  }
+
+  .header {
+    background: url(../image/nan_hero.png) center/cover no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+  }
+  /* セクション1　attraction*/
+
+  .section1 h2 {
+    text-align: center;
+  }
+  .tainan_region {
+    width: 14.7%;
+    margin-right: auto;
+    margin-left: 3%;
+    margin-bottom: 20px;
+  }
+  .img {
+    width: 45%;
+  }
+  .attraction_box1,
+  .attraction_box2,
+  .attraction_box3,
+  .attraction_box4 {
+    display: flex;
+    margin-left: 3%;
+    margin-right: 3%;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    align-items: center;
+    font-size: clamp(12px, 1.5vw, 20px);
+  }
+  .attraction_box1 img,
+  .attraction_box3 img {
+    width: 53.5%;
+    object-fit: cover;
+    margin: 0;
+    aspect-ratio: 60/32;
+  }
+  .attraction_box2 img,
+  .attraction_box4 img {
+    margin: 0;
+    width: 48.5%;
+    max-width: 48.5%;
+    aspect-ratio: 290/177;
+  }
+
+  .tainan_info1,
+  .tainan_info2 {
+    width: 42.8%;
+    margin: 0;
+    font-size: clamp(12px, 1.5vw, 20px);
+  }
+
+  .amp_sub,
+  .aka_sub {
+    width: 53.5%;
+  }
+  .tainan_region:last-of-type {
+    width: 11%;
+  }
+  .attraction_box2 {
+    margin-bottom: 240px;
+  }
+  .attraction_box2::after {
+    bottom: -120px;
+    left: 28%;
+    width: 44%;
+  }
+  .attraction_box4 {
+    margin-bottom: 50px;
+  }
+  /* セクション２ gourmet*/
+  .section2 h2 {
+    margin-left: auto;
+    margin-right: 0;
+  }
+  .section2 .gour {
+    width: 37%;
+    margin-left: auto;
+    margin-right: 4.5%;
+    margin-top: 80px;
+    margin-bottom: 80px;
+  }
+  .section2 ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .section2 ul li {
+    flex-basis: 50%;
+    padding-left: 2.5%;
+    padding-right: 2.5%;
+  }
+  .section2 br {
+    display: none;
+  }
+  .section2 img {
+    width: 100%;
+    margin: 0;
+  }
+  .section2 h3 {
+    text-align: left;
+    margin-bottom: 20px;
+  }
+  .section2 li {
+    margin-bottom: 60px;
+  }
+
+  /* セクション３ healling*/
+
+  .section3 .tainan_region {
+    width: 6em;
+    text-align-last: center;
+  }
+  .section3 .lotus {
+    text-align: left;
+    width: 37%;
+    margin-right: auto;
+    margin-left: 4.5%;
+    margin-bottom: 80px;
+  }
+  .section3 h2 {
+    margin-bottom: 80px;
+  }
+  .section3 h3 {
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 60px;
+  }
+  .section3 img {
+    width: 53.7%;
+    margin: 0;
+    aspect-ratio: 600/360;
+    object-fit: cover;
+  }
+  .hasu_box1,
+  .hasu_box2 {
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .hasu_box1 p,
+  .hasu_box2 p {
+    width: 43%;
+    margin: 0;
+  }
+  .hasu_box1 {
+    margin-bottom: 40px;
+  }
+
+  /* row-reverseでpとimgを逆に表示 */
+  .hasu_box2 {
+    flex-direction: row-reverse;
+  }
+  .section3 {
+    padding-bottom: 100px;
+  }
+  /* フッター領域 */
+  /* モーダルPC */
+  .modal_style {
+    background-color: #f4f4f4;
+  }
+
+  .modal_style img {
+    width: 33%;
+  }
+}

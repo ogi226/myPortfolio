@@ -1,0 +1,467 @@
+@charset "utf-8";
+
+/* モバイル版css記述 */
+/* ヘッダー部分 */
+.header {
+  background: url(../image/chu_hero_sp.png) center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ヘッダーここまで */
+
+/*_________________________
+///////// メイン領域 共通箇所////////
+__________________________*/
+
+body {
+  background-color: #f4f4f4;
+}
+
+/* パンくずメニューのフレックス と下線部の色を変更*/
+ol {
+  display: flex;
+  color: #333;
+  margin-left: 8px;
+}
+
+.pankuzu_top {
+  margin-right: 4px;
+  text-decoration: underline solid #cce5df;
+}
+
+/* section全体について */
+.section_2,
+.section_3,
+.section_4 {
+  margin: 40px 32px 0 32px;
+}
+
+/* //// 各sectionの中の共通箇所の設定 /////*/
+h2,
+h3 {
+  text-align: center;
+  color: #333;
+}
+
+h2 {
+  margin-bottom: 40px;
+}
+
+h3 {
+  font-size: 24px;
+  letter-spacing: 0.3em;
+}
+
+img {
+  margin: 20px auto;
+}
+
+p {
+  margin-right: auto;
+  margin-left: auto;
+  color: #333;
+}
+
+/*________________________________
+///////////////////// メイン領域////////////////////////
+________↑↑↑↑↑ここまで↑↑↑↑_________*/
+
+/*//////////// Attraction項目 ///////////////*/
+
+/* Attraction の中 テキストの背景色*/
+.attraction_text_a {
+  background-color: #f3e3de;
+  padding: 20px 16px;
+  text-align: justify;
+}
+
+.attraction_text_b {
+  background-color: #f3e3de;
+  padding: 8px 16px;
+  text-align: justify;
+}
+
+.boundary_line {
+  max-width: 224px;
+  margin: 60px auto;
+  border-bottom: 1px solid var(--black);
+}
+
+.img_2 {
+  display: none;
+}
+.img_1 {
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+
+/* Museum項目 */
+
+.museum_sub_img {
+  margin: 12px auto;
+}
+
+.museum_sub_img_pc {
+  display: none;
+}
+
+.museum_text {
+  max-width: 224px;
+  border-bottom: 1px solid var(--black);
+  border-top: 1px solid var(--black);
+  text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+.museum_box {
+  margin-top: 40px;
+}
+
+.museum_facility {
+  text-align: start;
+  font-size: 12px;
+  color: #333;
+}
+
+h4 {
+  font-size: 15px;
+  color: #333;
+}
+
+.times {
+  display: inline-block;
+  text-align: right;
+  border: 2px solid #7bbad9;
+  padding: 12px;
+  margin-top: 12px;
+}
+
+div .museum_time {
+  display: block;
+  text-align: right;
+}
+
+.triangle_right::after {
+  content: "";
+  display: inline-block;
+  border-left: 5px solid #0180be;
+  border-right: 0 solid transparent;
+  border-top: 4.75px solid transparent;
+  border-bottom: 4.75px solid transparent;
+  margin-left: 5px;
+}
+
+/*Sweets項目  */
+.sweets_h4 {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.img_box {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img_box img {
+  max-width: 47%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* モーダル個別 */
+.modal_img {
+  width: 78.6%;
+  margin-right: auto;
+  margin-left: auto;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.modal_img img {
+  width: 47.4%;
+  margin: 0;
+}
+
+#modal_text,
+#modal_subtext {
+  margin: 0 auto;
+  width: 78.6%;
+  text-align: left;
+}
+
+/* pcサイトCSS */
+@media screen and (min-width: 800px) {
+  /* pcヘッダー */
+  .header {
+    background: url(../image/chu_hero.png) center/cover no-repeat;
+  }
+
+  /* img全体に書かれたマージン調整を打ち消すために記述しています */
+  .header .header_wrap .sub_h1 img {
+    margin: 0;
+    margin-left: auto;
+  }
+
+  /*_________________________
+///////// メイン領域 共通箇所////////
+__________________________*/
+  nav {
+    margin-left: 10px;
+  }
+  /* パンくずメニューのフレックス と下線部の色を変更*/
+  main nav ol li,
+  main nav ol li a {
+    font-size: 20px;
+  }
+
+  .section_2,
+  .section_3,
+  .section_4 {
+    /* max-width: 1200px; */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .section_4 {
+    padding-bottom: 240px;
+  }
+
+  img {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* Attraction領域 */
+
+  h3 {
+    text-align: left;
+  }
+
+  h4 {
+    font-size: 36px;
+  }
+
+  .img_1 {
+    display: none;
+  }
+  .img_2 {
+    display: block;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  .attraction_box1 {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .attraction_box1 img {
+    width: 50%;
+    height: auto;
+    margin: 0;
+  }
+
+  .attraction_text_a {
+    width: 40%;
+    object-fit: contain;
+    margin: 0;
+  }
+
+  .attraction_box2 {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .attraction_box2 img {
+    width: 50%;
+    height: auto;
+    margin: 0;
+  }
+
+  .attraction_text_b {
+    width: 40%;
+    height: 5em;
+    max-height: 360px;
+    object-fit: contain;
+    margin: 0;
+    padding-top: 1em;
+  }
+
+  .boundary_line {
+    max-width: 420px;
+  }
+
+  .attraction_box3 {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .attraction_box3 img {
+    width: 50%;
+    height: auto;
+    margin: 0;
+  }
+
+  .attraction_box4 {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    margin-bottom: 20px;
+    align-items: center;
+  }
+
+  .attraction_box4 img {
+    width: 50%;
+    height: auto;
+  }
+
+  /* Museum領域 */
+
+  .h2_museum {
+    margin-right: 20px;
+    margin-left: auto;
+  }
+
+  .museum_box1,
+  .museum_box3 {
+    padding-right: 29px;
+  }
+  .museum_box2,
+  .museum_box4 {
+    padding-left: 29px;
+  }
+
+  .museum_text_box {
+    display: block;
+  }
+
+  .museum_text {
+    max-width: 440px;
+    margin-right: 60px;
+    margin-left: auto;
+  }
+
+  /* museum各Boxの共通設定 */
+
+  .museum_box_category1,
+  .museum_box_category2 {
+    display: flex;
+    justify-content: space-between;
+    /* max-width: 1200px; */
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+
+  .museum_facility {
+    font-size: 24px;
+  }
+
+  .museum_sub_img_sp {
+    display: none;
+  }
+
+  .museum_sub_img_pc {
+    display: block;
+  }
+
+  .museum_sub_img,
+  .museum_sub_img_pc {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .museum_box_text {
+    max-width: 530px;
+  }
+
+  /*Sweets項目  */
+  .sweets_box {
+    max-width: 420px;
+    text-align: center;
+    margin-left: 75px;
+  }
+
+  .sweets_text {
+    border-bottom: 1px solid var(--black);
+    border-top: 1px solid var(--black);
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: left;
+    display: inline-block;
+    max-width: 420px;
+    font-size: 20px;
+  }
+
+  .sweets_history {
+    display: flex;
+    justify-content: space-around;
+    /* max-width: 1200px; */
+    align-items: center;
+    margin-top: 60px;
+  }
+
+  .sweets_history .img {
+    max-width: 50%;
+  }
+
+  .sweets_history_text {
+    width: 40%;
+    font-size: 20px;
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+
+  .history_img_box {
+    display: flex;
+    /* max-width: 1200px */
+  }
+
+  .img_box {
+    max-width: 50%;
+  }
+
+  .sweets_img {
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+
+  .history_box_sub {
+    display: flex;
+    flex-flow: column-reverse;
+  }
+  .modal_img {
+    width: 57%;
+  }
+  .box_sub_text {
+    font-size: 20px;
+    margin-left: 50px;
+    margin-right: 40px;
+  }
+
+  #modal_title {
+    margin-bottom: 20px;
+    margin-left: 21.5%;
+  }
+
+  #modal_text,
+  #modal_subtext {
+    margin-left: 21.5%;
+    font-size: 20px;
+  }
+}

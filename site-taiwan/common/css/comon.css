@@ -1,0 +1,839 @@
+@charset "utf-8";
+
+/* モバイル版css記述 */
+/* 共通の文字スタイル設定 */
+* {
+  font-family: "Zen Kaku Gothic New", sans-serif;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+* h2 {
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+* a {
+  text-decoration: none;
+}
+footer {
+  position: relative;
+}
+/* カスタムプロパティにて共通色を設定 */
+:root {
+  --lightblue: #6cbad8;
+  --blue: #0180be;
+  --pink: #eda184;
+  --white: #ffffff;
+  --gray: #f4f4f4;
+  --black: #000000;
+}
+
+/* ローディング画面 */
+#loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--blue);
+  z-index: 150;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.5s;
+}
+
+#loading img {
+  width: 76.5%;
+  animation-name: loading;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loading {
+  0% {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+/* ハンバーガーメニュー */
+.hum_menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 25;
+}
+
+/* チェックボックスを非表示に */
+.hum_menu .menu_button {
+  display: none;
+}
+
+/* アイコンの位置を右上に固定 */
+.hum_menu .menu_icon {
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  padding-top: 5px;
+  height: 10px;
+  cursor: pointer;
+}
+
+.hum_menu .menu_icon .menu_bg {
+  width: 48px;
+  height: 48px;
+  background-color: var(--black);
+  opacity: 0.5;
+  border-radius: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* span要素で三本線を作成 */
+.hum_menu .menu_icon .nav_icon {
+  display: flex;
+  flex-direction: row;
+  background-color: var(--gray);
+  height: 2px;
+  width: 36px;
+  position: relative;
+  transition: all 0.4s ease-out;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 上と下に線を表示 */
+.hum_menu .menu_icon .nav_icon::after {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--gray);
+  top: -12px;
+  width: 75%;
+  height: 100%;
+  transition: all 0.4s ease-out;
+}
+
+.hum_menu .menu_icon .nav_icon::before {
+  content: "";
+  position: absolute;
+  display: block;
+  background-color: var(--gray);
+  top: 12px;
+  width: 75%;
+  height: 100%;
+  transition: all 0.4s ease-out;
+}
+
+/* メニュー部分のスタイルを設定 */
+.hum_menu ul {
+  background-color: rgba(0, 0, 0, 0.7);
+  text-align: center;
+  /* チェックが入ってないときに中が見えないようにする設定 */
+  overflow: hidden;
+  /* 高さを0にすることによって非表示にする */
+  max-height: 0;
+  transition: all 0.6s;
+}
+
+.hum_menu .menu_button:checked ~ ul {
+  max-height: 800px;
+  height: 532px;
+  padding: 8px;
+}
+
+.hum_menu ul li {
+  color: var(--white);
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 32px;
+  font-weight: bold;
+}
+
+.hum_menu a {
+  font-size: 20px;
+}
+
+.hum_menu ul li img {
+  width: 100px;
+  margin-bottom: 72px;
+}
+
+.hum_menu .menu_button:checked ~ .menu_icon .nav_icon {
+  background-color: transparent;
+}
+
+.hum_menu .menu_button:checked ~ .menu_icon .nav_icon::after {
+  /* 線を回転させて×マークを作成する */
+  transform: rotate(45deg);
+  top: 0px;
+  width: 100%;
+}
+
+.hum_menu .menu_button:checked ~ .menu_icon .nav_icon::before {
+  transform: rotate(-45deg);
+  top: 0px;
+  width: 100%;
+}
+
+/* ハンバーガーメニューここまで */
+/* トップページ戻るボタン作成 */
+html {
+  scroll-behavior: smooth;
+}
+
+.toppage_return {
+  position: fixed;
+  bottom: 24px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  background: #d9d9d9;
+  border-radius: 48px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.toppage_return:hover {
+  cursor: pointer;
+}
+
+.toppage_return a {
+  content: "";
+  width: 10px;
+  height: 10px;
+  border-top: 3px solid #fff;
+  border-right: 3px solid #fff;
+  transform: rotate(-45deg);
+}
+
+/* スクロールされたら再表示 */
+.toppage_return.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ヘッダ領域場所確保 */
+.header {
+  width: 100%;
+  height: 82vh;
+}
+
+.header .top_h1 {
+  padding: 14.7vh 20px;
+}
+
+.header_wrap {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header .sub_h1 img {
+  margin-top: 14.7vh;
+  margin-left: auto;
+  margin-right: auto;
+  height: 45vh;
+}
+
+.header p {
+  color: var(--white);
+  width: 65%;
+  margin-top: auto;
+  margin-left: auto;
+  margin-right: 8px;
+  margin-bottom: 8px;
+  text-align: left;
+}
+
+/* class=section_info(上下にシングルラインのついた文章のスタイル) */
+/* 注:中央揃えにするため、親要素（多分sectionになると思います)にtext-align:center;を設定してください */
+.section_info {
+  display: inline-block;
+  line-height: 1.6;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--black);
+  border-top: 1px solid var(--black);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* パンくずメニューのフレックス と下線部の色を変更*/
+ol {
+  display: flex;
+  color: #333;
+  margin-left: 8px;
+}
+
+.pankuzu_top {
+  margin-right: 4px;
+  text-decoration: underline solid #cce5df;
+}
+
+/* 見出し下の  共通中華風アンダーライン*/
+h2 {
+  text-align: center;
+  border-bottom: 2px solid #ca3835;
+  position: relative;
+  max-width: 220px;
+  margin-right: auto;
+  margin-left: auto;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+h2 .h2_span {
+  margin-left: 0.5em;
+}
+
+/* 縦長-長方形-  */
+.header_front {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 11.5px;
+  height: 18px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: 0;
+  top: 21px;
+}
+
+/* 四角形 */
+.header_front::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10.5px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: 3.5px;
+  top: 2.5px;
+}
+
+/* 横長-長方形- */
+.header_front::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 9px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  top: 7px;
+  left: -1px;
+}
+
+/* 縦長-長方形- */
+.header_back {
+  content: "";
+  position: absolute;
+  width: 11.5px;
+  height: 18px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  top: 21px;
+  right: 0;
+}
+
+/* 四角形 */
+.header_back::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10.5px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: -6px;
+  top: 2.5px;
+}
+
+/* 横長長-方形- */
+.header_back::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 9px;
+  border-top: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  top: 7px;
+  left: -12px;
+}
+
+/* モーダルウィンドウ関係 */
+.modal_style {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: #0180be;
+  z-index: 50;
+}
+
+.active_1 {
+  display: block;
+}
+
+#modal_title {
+  font-size: 24px;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 80px;
+  margin-bottom: 32px;
+}
+
+.modal_style img {
+  max-width: 89%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+.modal_img {
+  display: flex;
+}
+
+#modal_text {
+  color: #fff;
+  width: 80.8%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+}
+
+#modal_subtext {
+  color: #fff;
+  text-align: center;
+}
+
+/* モーダルのボタンマウスオーバーで指マークに */
+.modal_button:hover {
+  cursor: pointer;
+}
+
+/* バツ印ボタン作成 */
+#modal_closebutton {
+  display: block;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  margin-left: auto;
+  top: 20px;
+  right: 20px;
+}
+
+#modal_closebutton::before,
+#modal_closebutton::after {
+  content: "";
+  position: absolute;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 7.07px;
+  height: 32.5px;
+  background: #333;
+}
+
+#modal_closebutton::before {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+#modal_closebutton::after {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+#modal_closebutton:hover {
+  cursor: pointer;
+}
+
+/* /////// footer //////// */
+.footer {
+  background-color: #007ab7;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer .footer_nflag {
+  margin: 0 auto;
+  width: 32px;
+  height: 24px;
+}
+
+.footer_ul {
+  margin-top: 20px;
+}
+
+.footer_ul li {
+  border-bottom: 1px solid var(--white);
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  padding-bottom: 8px;
+  margin-bottom: 12px;
+  padding-left: 7px;
+}
+
+.footer_logo {
+  display: none;
+}
+
+.svg_icon {
+  margin-bottom: 0;
+}
+
+.sns_icon {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.sns_icon_fb {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.footer_corporate {
+  text-align: center;
+  font-size: 10px;
+  margin-top: 20px;
+  color: #fff;
+}
+
+/* /////// footer ここまで//////// */
+
+/* pcサイトCSS */
+@media screen and (min-width: 800px) {
+  #loading img {
+    width: 23.2%;
+  }
+
+  * {
+    font-size: clamp(12px, 1.5vw, 20px);
+  }
+
+  /* ヘッダ領域確保 */
+  .header {
+    width: 100%;
+    height: 768px;
+    background-color: var(--gray);
+  }
+
+  .header a:hover {
+    font-weight: 900;
+    text-decoration: underline double;
+  }
+
+  .header_wrap {
+    max-width: 1200px;
+    width: 87.8vw;
+    margin-left: auto;
+    margin-right: auto;
+    flex-wrap: wrap;
+    flex-direction: row;
+  }
+
+  .header .top_h1 {
+    padding: 0;
+    margin: 0;
+  }
+
+  .header .top_h1 .top_img {
+    width: 65%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12.5%;
+  }
+
+  .header .sub_h1 {
+    width: 50%;
+    height: 90%;
+    flex-basis: 50%;
+    margin: 0;
+  }
+
+  .header .sub_h1 img {
+    height: 78.1%;
+    margin-left: auto;
+    margin-right: 3%;
+    margin-top: 5%;
+  }
+
+  .header p {
+    width: 40%;
+    margin: 0;
+    margin-top: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    margin-right: 20px;
+  }
+  /* トップページに戻るボタンPC */
+  .toppage_return {
+    right: 40px;
+    bottom: 40px;
+  }
+  /* pcサイト用ハンバーガーメニュー */
+  .hum_menu .menu_icon {
+    display: none;
+  }
+
+  .hum_menu ul {
+    display: flex;
+    max-width: 100%;
+    max-height: 100%;
+    width: 100%;
+    background-color: transparent;
+    justify-content: center;
+  }
+
+  .hum_menu ul li {
+    font-size: 24px;
+    height: 56px;
+    margin-top: 20px;
+    height: 100%;
+    width: 4em;
+    margin: 20px;
+    flex-grow: 0;
+  }
+
+  .hum_menu ul li img {
+    padding: 0;
+    margin: 0;
+  }
+
+  .hum_menu ul li:first-child {
+    flex-grow: 10;
+    width: 100%;
+  }
+
+  .hum_menu {
+    position: static;
+    max-width: 100%;
+    height: 10%;
+  }
+
+  /* ハンバーガーメニューここまで */
+
+  /* パンくずメニューのフォント調整 */
+  main nav ol li,
+main nav ol li a{
+  font-size: 20px;
+}
+
+
+  /* ////// PC版共通見出し//// */
+  h2 {
+    max-width: 530px;
+    font-size: 48px;
+    margin-left: 0px;
+    border-bottom: 4.5px solid #ca3835;
+  }
+
+  h2 .h2_span {
+    font-size: 24px;
+    margin-left: 1em;
+  }
+
+  /* 縦長-長方形-  */
+  .header_front {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 28px;
+    height: 45px;
+    border-top: 5px solid #ca3835;
+    border-right: 6px solid #ca3835;
+    border-left: 6px solid #ca3835;
+    left: 0;
+    top: 33px;
+  }
+
+  /* 四角形 */
+  .header_front::before {
+    content: "";
+    position: absolute;
+    width: 26px;
+    height: 26.25px;
+    border-top: 5px solid #ca3835;
+    border-right: 6px solid #ca3835;
+    border-bottom: 5px solid #ca3835;
+    border-left: 6px solid #ca3835;
+    left: 7.5px;
+    top: 5.5px;
+  }
+
+  /* 横長-長方形- */
+  .header_front::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 26.5px;
+    border-top: 5px solid #ca3835;
+    border-right: 6px solid #ca3835;
+    top: 16px;
+    left: -4px;
+  }
+
+  /* 縦長-長方形- */
+  .header_back {
+    content: "";
+    position: absolute;
+    width: 28px;
+    height: 45px;
+    border-top: 5px solid #ca3835;
+    border-right: 6px solid #ca3835;
+    border-left: 6px solid #ca3835;
+    top: 33px;
+    right: 0;
+  }
+
+  /* 四角形 */
+  .header_back::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 26px;
+    height: 26.25px;
+    border-top: 5px solid #ca3835;
+    border-right: 6px solid #ca3835;
+    border-bottom: 5px solid #ca3835;
+    border-left: 6px solid #ca3835;
+    left: -16px;
+    top: 5.5px;
+  }
+
+  /* 横長長-方形- */
+  .header_back::after {
+    content: "";
+    position: absolute;
+    width: 50px;
+    height: 26.5px;
+    border-top: 5px solid #ca3835;
+    border-left: 6px solid #ca3835;
+    top: 16px;
+    left: -28px;
+  }
+
+  /* pcmodal */
+
+  .modal_wrap {
+    display: flex;
+    max-width: 1200px;
+    width: 85%;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: space-between;
+  }
+
+  .modal_wrap img {
+    max-width: 100%;
+    object-fit: contain;
+  }
+
+  .modal_wrap div {
+    width: 43%;
+  }
+
+  .modal_wrap .modal_img {
+    width: 51.7%;
+    margin: 0;
+  }
+
+  #modal_text {
+    width: 100%;
+    margin-top: 56px;
+    margin-bottom: 60px;
+  }
+
+  #modal_subtext {
+    font-size: clamp(12px, 2.3vw, 36px);
+  }
+
+  #modal_title {
+    text-align: left;
+    margin-left: 7.5%;
+    font-size: 36px;
+    margin-top: 5.8%;
+  }
+
+  /* /////// footer //////// */
+  .footer {
+    padding: 40px 20px 40px 20px;
+  }
+
+  footer .footer_nflag {
+    width: 64px;
+    height: 48px;
+  }
+
+  footer .conteiner {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: space-between;
+  }
+
+  .footer_ul li {
+    border-bottom: 1px solid var(--white);
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 8px;
+    margin-bottom: 12px;
+    padding-left: 0;
+  }
+
+  .footer_logo {
+    display: inline;
+    max-width: 240px;
+    margin-bottom: 0px;
+    margin-top: auto;
+  }
+
+  .sns_icon {
+    margin-top: auto;
+  }
+
+  .svg_icon {
+    width: 55px;
+    height: 55px;
+  }
+  .footer_wrap {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  /* /////// footer ここまで//////// */
+}

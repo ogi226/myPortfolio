@@ -1,0 +1,852 @@
+@charset "utf-8";
+
+/* モバイル版css記述 */
+
+/* 全体の背景色 */
+body {
+  background-color: #f4f4f4;
+}
+
+/* ヘッダー部分 */
+.header {
+  background: url(../image/pei_hero_sp.png) center/cover no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* ヘッダーここまで */
+
+/* メイン */
+
+/* 九份エリア*/
+
+/* 見出し① */
+.attraction h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* 見出し② */
+.heading_region {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 九分全体の大きさ */
+.town_kyuhun {
+  width: 78vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 画像サイズ調整 */
+.town_kyuhun img {
+  width: 100%;
+  margin: auto;
+}
+
+/* 文章背景水色に変更 幅調整*/
+.town_kyuhun p {
+  background-color: #6cb9d85e;
+  margin: 20px 0px;
+  padding: 20px 16px;
+}
+
+/* 画像をflex */
+.town_cityscape {
+  display: flex;
+  justify-content: center;
+}
+
+/* 画像縦を長く調整 */
+.town_cityscape img {
+  max-width: 38%;
+  /* height: 350px; */
+  object-fit: contain;
+  margin: 5px;
+}
+
+/* おすすめ時間：背景を水色に変更 */
+.town_food p {
+  background-color: #6cb9d85e;
+  margin: 20px 40px;
+  text-align: center;
+}
+
+/* 区切り線作成 */
+.town_food {
+  position: relative;
+  padding: 10px;
+}
+
+/* afterで線をdivの後ろにつける */
+.town_food::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 23%;
+  width: 54%;
+  height: 0;
+  border-bottom: 1px solid #403d3d;
+}
+
+/* 台北101エリア */
+
+.heading_region {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+/* 夜景画像サイズ調整 */
+.town_taipei img {
+  max-width: 80%;
+  margin: auto;
+}
+
+/* 文字の背景を水色へ */
+.town_taipei p {
+  background-color: #6cb9d85e;
+  margin: 20px 40px;
+  padding: 20px 16px;
+}
+
+/* 画像を横並びに */
+.town_shop {
+  display: flex;
+  justify-content: center;
+}
+
+/* 画像のサイズ調整 */
+.town_shopping img {
+  width: 37vw;
+  height: 27.7vh;
+  object-fit: contain;
+  margin: 5px;
+}
+
+/* 文字の背景を青色に */
+.town_shopping p {
+  background-color: #6cb9d85e;
+  margin: 20px 40px;
+  text-align: center;
+}
+
+/* nightmaketエリア */
+
+.nightmarket h2 {
+  text-align: center;
+}
+
+/* nightmalet全体のサイズ調整 */
+.nightmarket_gourmet {
+  width: 78.6vw;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* 文章上下線を共通より、下幅のみ挿入 */
+.section_info {
+  margin-bottom: 20px;
+}
+
+/* 画像中央に　サイズ調整 */
+.nightmarket_gourmet img {
+  max-width: 100%;
+  margin-bottom: 60px;
+}
+
+/* モーダルウインドウボタン作成 */
+.nightmarket_yoichi {
+  display: flex;
+  /* grid-template-columns: 1fr 1fr; */
+  flex-wrap: wrap;
+  align-content: space-between;
+  justify-content: space-between;
+  width: 73vw;
+  height: 15.5vh;
+  margin: 20px auto;
+}
+
+.letter_1,
+.letter_2,
+.letter_3,
+.letter_4 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.letter_1,
+.letter_2,
+.letter_3,
+.letter_4 p {
+  font-size: 12px;
+  font-weight: bold;
+}
+.letter_1:hover,
+.letter_2:hover,
+.letter_3:hover,
+.letter_4:hover {
+  background-color: #fff;
+}
+.letter_1:hover p,
+.letter_2:hover p,
+.letter_3:hover p,
+.letter_4:hover p {
+  transform: scale(110%);
+  transition: 0.5s;
+}
+/* 仮枠線 */
+.modal_button {
+  text-align: center;
+  width: 35vw;
+  height: 7vh;
+}
+
+.modal_text_box {
+  position: relative;
+  border: 2px solid #ca3835;
+  width: 100%;
+  height: 100%;
+  align-self: center;
+}
+
+/* ////中華風枠の装飾 ////*/
+
+/* 左上 */
+.left_up {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 11.5px;
+  height: 18px;
+  border-bottom: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  left: -2px;
+  top: 0;
+}
+
+.left_up::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10.5px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: 5.5px;
+  top: 3px;
+}
+
+.left_up::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 9px;
+  border-bottom: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  top: 0;
+  left: 0px;
+}
+
+/* 左下 */
+.left_down {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 11.5px;
+  height: 18px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  left: -2px;
+  /* top: 49px; */
+  bottom: 0px;
+}
+
+.left_down::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10.5px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: 5.5px;
+  top: 3px;
+}
+
+.left_down::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 9px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  top: 7px;
+  left: 0px;
+}
+
+/* 右上 */
+.right_up {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 11.5px;
+  height: 18px;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  right: 0;
+  top: 0;
+}
+
+.right_up::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10.5px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: -6px;
+  top: 3px;
+}
+
+.right_up::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 9px;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  top: 0;
+  left: -11px;
+}
+
+/* 右下 */
+.right_down {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 11.5px;
+  height: 18px;
+  border-top: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  right: 0px;
+  /* top: 50px; */
+  bottom: 0px;
+}
+
+.right_down::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10.5px;
+  border-top: 2px solid #ca3835;
+  border-right: 2.5px solid #ca3835;
+  border-bottom: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  left: -6px;
+  top: 2.5px;
+}
+
+.right_down::after {
+  content: "";
+  position: absolute;
+  width: 20.5px;
+  height: 9px;
+  border-top: 2px solid #ca3835;
+  border-left: 2.5px solid #ca3835;
+  top: 6px;
+  left: -11px;
+}
+
+/* //↑↑中華風枠の装飾 ↑↑//*/
+/* accessエリア */
+
+/* 見出し中央に */
+.heading {
+  text-align: center;
+}
+
+/* ボタン枠線 */
+.access_text {
+  text-align: center;
+  padding: 8px;
+  border-bottom: 1px solid #333;
+  margin-bottom: 10px;
+  width: 19em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 交通画像 */
+.access_imgcar {
+  width: 78.7vw;
+  height: 14vh;
+  object-fit: cover;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 各交通機関の説明文 */
+dd,
+dt,
+dd {
+  margin: 20px 40px;
+}
+
+dl {
+  margin-bottom: 116px;
+}
+
+/* 悠遊カード */
+dd img {
+  width: 26vw;
+  height: 7.8vh;
+  object-fit: contain;
+  margin-right: 40px;
+}
+
+/* 悠遊カードの説明文 */
+dl p {
+  margin: 12px 40px 60px;
+}
+
+/* モーダルウインドウ　メイン */
+
+/* ハンバーガーメニュー */
+
+/* ////////////////////////////////////// */
+/* pcサイトCSS */
+/* ////////////////////////////////////// */
+
+@media screen and (min-width: 800px) {
+  /* 九份エリアPC版 */
+  /* 画像を横並びにする */
+  .attraction h2 {
+    text-align: center;
+    margin-right: auto;
+    margin-left: 123px;
+  }
+
+  .heading_region {
+    font-size: 36px;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-left: 11vw;
+  }
+
+  .town_kyuhun {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    width: 78vw;
+    /* width: 600px;
+    height: 360px;
+    margin-right: auto; */
+  }
+
+  /* 画像のサイズ・歪み調整 */
+  .town_kyuhun img {
+    width: 51.4%;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  /* 文章サイズ調整 */
+  .town_kyuhun p {
+    width: 41.1%;
+    margin: 0;
+    padding: 0;
+    padding: 20px;
+  }
+
+  /* 画像を横並びに */
+  .town_food {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 78vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+  }
+
+  /* 画像サイズ調整 */
+  .town_cityscape {
+    width: 51.4%;
+    justify-content: space-between;
+  }
+
+  /* 画像２つに横並び */
+  .town_cityscape img {
+    margin: 0;
+    max-width: 100%;
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* 文章サイズ調整 */
+  .town_food p {
+    width: 41.1%;
+    height: 5em;
+    padding-top: 1em;
+    margin: 0;
+    align-self: center;
+  }
+
+  /* 台北101エリア */
+
+  /* エリア全体を中央に */
+
+  .town_food {
+    margin-bottom: 240px;
+  }
+
+  .town_food::after {
+    content: "";
+    position: absolute;
+    bottom: -120px;
+  }
+
+  /* 画像・文章を横並びに */
+  .town_taipei {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 78vw;
+    margin-bottom: 20px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  /* 画像サイズ調整へ */
+  .town_taipei img {
+    width: 51.1%;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  /* 文章サイズ調整 */
+  .town_taipei p {
+    width: 41.1%;
+    margin: 0;
+    /* padding: 0; */
+    padding: 20px;
+  }
+
+  /* 画像を横並びに */
+  .town_shopping {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 78vw;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0;
+    margin-bottom: 120px;
+  }
+
+  /*画像２つのサイズ調整  */
+  .town_shop {
+    width: 51.1%;
+    justify-content: space-between;
+  }
+
+  /*  画像サイズ調整*/
+  .town_shop img {
+    margin: 0;
+    max-width: 100%;
+    width: 48%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  /* 文章サイズ調整 */
+  .town_shopping p {
+    width: 41.1%;
+    align-self: center;
+    height: 5em;
+    padding-top: 1em;
+    margin: 0;
+  }
+
+  /* nightmarketエリア */
+
+  /* .nightmarket_gourmet img {
+    max-width: 1200px;
+    width: 47%;
+    height: 35%;
+  } */
+
+  /* ////中華風枠の装飾 ////*/
+
+  /*  */
+  .modal_text_box {
+    border: 4.5px solid #ca3835;
+    /* padding-top: 100%; */
+  }
+
+  /* 左上 */
+  .left_up {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 27px;
+    border-bottom: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    left: 0px;
+    top: 0px;
+  }
+
+  .left_up::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 15.5px;
+    border-top: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    border-bottom: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    left: 5px;
+    top: 4.5px;
+  }
+
+  .left_up::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 14px;
+    border-bottom: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    top: 0px;
+    left: 0px;
+  }
+
+  /* 左下 */
+  .left_down {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 27px;
+    border-top: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    left: 0px;
+    bottom: 0px;
+  }
+
+  .left_down::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 15.5px;
+    border-top: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    border-bottom: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    left: 5px;
+    top: 4px;
+  }
+
+  .left_down::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 14px;
+    border-top: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    top: 9px;
+    left: 0px;
+  }
+
+  /* 右上 */
+  .right_up {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 27px;
+    border-bottom: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    right: 0px;
+    top: 0px;
+  }
+
+  .right_up::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 15.5px;
+    border-top: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    border-bottom: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    left: -11px;
+    top: 4px;
+  }
+
+  .right_up::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 14px;
+    border-bottom: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    top: 0px;
+    left: -19px;
+  }
+
+  /* 右下 */
+  .right_down {
+    content: "";
+    position: absolute;
+    display: inline-block;
+    width: 16px;
+    height: 27px;
+    border-top: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    right: 0px;
+    bottom: 0px;
+  }
+
+  .right_down::before {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 15.5px;
+    border-top: 4px solid #ca3835;
+    border-right: 4.5px solid #ca3835;
+    border-bottom: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    left: -11px;
+    top: 4px;
+  }
+
+  .right_down::after {
+    content: "";
+    position: absolute;
+    width: 32px;
+    height: 14px;
+    border-top: 4px solid #ca3835;
+    border-left: 4.5px solid #ca3835;
+    top: 9px;
+    left: -20px;
+  }
+
+  /* //↑↑中華風枠の装飾 ↑↑//*/
+
+  .nightmarket h2 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: 7.5vw;
+  }
+
+  .nightmarket_text {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    width: 78vw;
+    margin-bottom: 40px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  .section_info {
+    width: 36.8%;
+    margin: 0;
+    align-self: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nightmarket_text img {
+    width: 47%;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .nightmarket_line {
+    display: flex;
+    justify-content: space-around;
+    max-width: 1200px;
+    height: auto;
+    width: 78vw;
+    margin: auto;
+  }
+
+  .nightmarket_line img {
+    width: 47%;
+    margin: 0;
+  }
+
+  .nightmarket_yoichi {
+    width: 47%;
+    height: 32.8vh;
+    justify-content: space-between;
+    align-content: space-between;
+  }
+
+  .modal_button {
+    width: 22vw;
+    height: 15vh;
+    flex-basis: 48%;
+    /* margin: 5px; */
+    padding-top: 1em;
+  }
+
+  .letter_1,
+  .letter_2,
+  .letter_3,
+  .letter_4 p {
+    font-size: 18px;
+  }
+
+  /* 交通手段PC版 */
+
+  .access {
+    max-width: 1200px;
+    width: 87vw;
+    margin: auto;
+  }
+
+  .access_imgcar {
+    width: 93%;
+    height: 18%;
+    object-fit: contain;
+  }
+
+  .access_text {
+    margin-right: auto;
+    margin-left: 3.5%;
+    margin-bottom: 40px;
+  }
+
+  .heading {
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 80px;
+  }
+
+  dl img {
+    width: 22%;
+    height: 14%;
+  }
+
+  dl {
+    margin-bottom: 240px;
+  }
+}

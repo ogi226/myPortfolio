@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common/css/reset.css">
+    <link rel="stylesheet" href="common/css/comon.css">
+    <link rel="stylesheet" href="top/css/top.css">
+    <title>台湾紹介webサイト</title>
+    <meta name="description" content="台湾の魅力を紹介するwebサイトです、ここは全体の魅力を紹介するtopページです">
+</head>
+
+<body>
+    <!-- ローディング画面 -->
+    <div id="loading"><img src="common/image/logo.svg" alt="ロゴ画像"></div>
+    <!-- ヘッダー領域 -->
+    <header class="header">
+        <div class="header_wrap">
+            <!-- 開閉式メニュー -->
+            <nav class="hum_menu">
+                <!-- チェックボックスでメニューの開閉を操作する -->
+                <input type="checkbox" class="menu_button" id="menu_button">
+                <!-- アイコンになる要素 -->
+                <label class="menu_icon" for="menu_button">
+                    <span class="menu_bg"><span class="nav_icon"></span></span>
+                </label>
+                <!-- メニュー本文 -->
+                <ul>
+                    <li><img src="common/image/logo.svg" alt="logo"></li>
+                    <li><a href="#">top</a></li>
+                    <li><a href="taipei/index.html">台北</a></li>
+                    <li><a href="taichung/index.html">台中</a></li>
+                    <li><a href="tainan/index.html">台南</a></li>
+                </ul>
+            </nav>
+            <h1 class="top_h1"><img src="common/image/logo.svg" class="top_img" alt="ロゴ画像"></h1>
+        </div>
+    </header>
+    <!-- ヘッダー領域ここまで -->
+    <div class="contents">
+        <!-- メインコンテンツここに記述してください、共通スタイル様にcontentsクラスを設定しています -->
+        <section class="intro">
+            <div id="back1">
+                <div class="content_wrapper">
+                    <div>
+                        <img src="common/image/com_nflag.png" alt="台湾国旗" class="intro_flag">
+                        <h3>formosa</h3>
+                        <p>フォルモサ(麗しの島)</p>
+                    </div>
+                    <img src="top/image/com_intro.png" alt="紹介画像1" class="intro_img">
+                </div>
+            </div>
+            <div id="back2">
+                <div class="content_wrapper">
+                    <p class="section_info">
+                        フォルモサは、十六世紀にポルトガル人がエメラルド色の美しい台湾を見つけて発した賛嘆の言葉です。緑にあふれた台湾の美しい風景が、あなたを桃源郷の世界へといざなってくれるでしょう。</p>
+                    <img src="top/image/com_intro2.png" alt="紹介画像2" class="intro_img">
+                </div>
+            </div>
+        </section>
+        <section class="gallery">
+            <div class="gallery_wrap">
+                <h2 class="heading">
+                    <span class="header_front"></span>gallery<span class="h2_span">ギャラリー</span>
+                    <span class="header_back"></span>
+                </h2>
+                <div class="slide_wrap">
+                    <div class="slide_imgwrap">
+                        <div class="slide_board">
+                            <img src="top/image/com_slide1.png" class="slide_img" id="slide_img1" alt="スライドショー画像1">
+                            <img src="top/image/com_slide2.png" class="slide_img" alt="スライドショー画像2" id="slide_img2">
+                            <img src="top/image/com_slide3.png" class="slide_img" alt="スライドショー画像3" id="slide_img3">
+                            <img src="top/image/com_slide4.png" alt="スライドショー画像4" class="slide_img" id="slide_img4">
+                            <img src="top/image/com_slide5.png" alt="スライドショー画像5" class="slide_img" id="slide_img5">
+                        </div>
+                    </div>
+                    <div class="slide_interface">
+                        <div class="slide_arrow" data-id="left"></div>
+                        <!-- ボタンカラートグル用クラスslide_selected -->
+                        <!-- data-btnid属性を使ってクリックされたボタンを識別します -->
+                        <div class="slide_button slide_selected" data-id="0"></div>
+                        <div class="slide_button" data-id="1"></div>
+                        <div class="slide_button" data-id="2"></div>
+                        <div class="slide_button" data-id="3"></div>
+                        <div class="slide_button" data-id="4"></div>
+                        <div class="slide_arrow" data-id="right"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="travel">
+            <div class="travel_wrap">
+                <h2 class="heading">
+                    <span class="header_front"></span>travel<span class="h2_span">おすすめスポット</span>
+                    <span class="header_back"></span>
+                </h2>
+                <div class="map_wrap">
+                    <p class="section_info">訪れた人々を魅了する「美麗島」台湾。そんな台湾の人気スポットを代表する地を３つのエリアでご紹介します。様々な風景に誰もが魅了されるでしょう。</p>
+                    <div class="map">
+                        <a href="taipei/index.html"><img src="top/image/taipei_char.png" alt="台北" id="taipei_char"></a>
+                        <a href="taichung/index.html">
+                            <img src="top/image/taichun_char.png" alt="台中" id="taichun_char">
+                        </a>
+                        <a href="tainan/index.html"><img src="top/image/tainan_char.png" id="tainan_char" alt="台南"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="event">
+            <div class="event_wrap">
+                <h2 class="heading">
+                    <span class="header_front"></span>event<span class="h2_span">おすすめイベント</span>
+                    <span class="header_back"></span>
+                </h2>
+                <ul>
+                    <li>
+                        <div class="event_li_left">
+                            <h3>台湾ランタンフェスティバル</h3>
+                            <img src="top/image/com_lantan.png" alt="">
+                        </div>
+                        <div class="event_li_right">
+                            <h4>開催期間</h4>
+                            <p>春節 旧暦元日（2月24日～3月2日）</p>
+                            <p class="section_info">
+                                春節の風習として「天燈」と呼ばれる紙製のランタンに無病息災などの祈りを書き込み、火種を用いて熱気球と同じ原理で空に飛ばす儀式です。吉祥や邪気払いの意味があります。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="event_li_left">
+                            <h3>台北最High新年城<br>カウントダウンパーティー</h3>
+                            <img src="top/image/com_countdown.png" alt="">
+                        </div>
+                        <div class="event_li_right">
+                            <h4>開催期間</h4>
+                            <p>12月31日～1月1日</p>
+                            <p class="section_info">
+                                台北101では毎年、元旦0時から約3分間、ビルを覆い尽くすように新年を祝う花火が舞い上がります。世界中から注目されるイベントの一つです。</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="basic_info">
+            <div class="basic_info_wrap">
+                <h2 class="heading">
+                    <span class="header_front"></span>台湾基本情報<span class="header_back"></span>
+                </h2>
+                <ul>
+                    <li>&#9632;国名：中華民国・台湾</li>
+                    <li>&#9632;首都：台北</li>
+                    <li>&#9632;人口：約2,300万人</li>
+                    <li>&#9632;面積：約3万6,000km²</li>
+                    <li>&#9632;人種・民族：漢民族、先住民</li>
+                    <li>&#9632;宗教：仏教、道教、キリスト教、その他</li>
+                    <li>&#9632;言語：北京語、台湾語</li>
+                    <li>&#9632;通貨：元（ニュー台湾ドル）</li>
+                    <li>&#9632;時差：1時間</li>
+                    <li>
+                        &#9632;台湾の気候・服装：<br>亜熱帯に属し一年を通して温暖な台湾。しかし北回帰線から南は熱帯で暑く、北部は大陸性気候の影響を受けて冷え込むこともあります。地域差を考慮して服装を準備しましょう。
+                    </li>
+                    <li>&#9632;台湾の祝祭日：
+                        <table>
+                            <tr>
+                                <td>正月</td>
+                                <td>1月1日</td>
+                            </tr>
+                            <tr>
+                                <td>端午節</td>
+                                <td>6月22日</td>
+                            </tr>
+                            <tr>
+                                <td>春節</td>
+                                <td>1月20日～29日</td>
+                            </tr>
+                            <tr>
+                                <td>中秋節</td>
+                                <td>9月29日</td>
+                            </tr>
+                            <tr>
+                                <td>平和記念日</td>
+                                <td>2月28日</td>
+                            </tr>
+                            <tr>
+                                <td>国慶節</td>
+                                <td>10月10日</td>
+                            </tr>
+                            <tr>
+                                <td>清明節</td>
+                                <td>4月5日</td>
+                            </tr>
+                        </table>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <!-- メインコンテンツここまで -->
+        <!-- トップページに戻るボタン作成開始 -->
+
+    </div>
+
+    <!-- フッター領域 -->
+    <footer class="footer">
+        <div class="footer_wrap">
+            <img class="footer_nflag" src="common/image/com_nflag.png" alt="">
+            <div class="conteiner">
+                <ul class="footer_ul">
+                    <li class="item"><a href="#">Top</a></li>
+                    <li class="item"><a href="taipei/index.html">台北</a></li>
+                    <li class="item"><a href="taichung/index.html">台中</a></li>
+                    <li class="item"><a href="tainan/index.html">台南</a></li>
+                    <li class="item"><a href="#">当サイトのポリシー</a></li>
+                    <li class="item"><a href="#">お問い合わせ</a></li>
+                </ul>
+                <img class="footer_logo" src="common/image/footer_logo.svg" alt="logo">
+                <ul class="sns_icon">
+                    <li><a href="#"><img class="svg_icon" src="common/image/facebook_logo.svg" alt="Facebook"></a></li>
+                    <li class="sns_icon_fb"><a href="#"><img class="svg_icon"
+                                src="common/image/Instagram_Glyph_Gradient.png" width="32px" height="32px"
+                                alt="instagram"></a></li>
+                    <li><a href="#"><img class="svg_icon" src="common/image/x_logo.svg" alt="Twitter"></a></li>
+                </ul>
+            </div>
+            <p class="footer_corporate">Copyright (C) TAIWAN Traveler</p>
+        </div>
+        <div class="toppage_return">
+            <a href="#"></a>
+        </div>
+    </footer>
+    <!-- フッター領域ここまで -->
+
+    <!-- 以下スクリプトインポート -->
+    <!-- jquerry -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <!-- 以下制作物 -->
+    <script src="top/js/top.js"></script>
+    <script src="common/js/loading.js"></script>
+    <script src="common/js/modal.js"></script>
+    <script src="common/js/other.js"></script>
+    <script src="common/js/pagetop.js"></script>
+</body>
+
+</html>

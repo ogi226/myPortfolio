@@ -1,0 +1,151 @@
+@charset "UTF-8";
+
+body {
+  background-color: rgb(0, 0, 0);
+  text-align: center;
+}
+
+/* タイマーが0になったとき用 */
+.flashing {
+  animation: blinkAnimeS2 0.8s infinite alternate;
+}
+
+@keyframes blinkAnimeS2 {
+  0% {
+    color: white;
+    background: rgba(236, 236, 9, 0.557)
+  }
+
+  100% {
+    color: rgba(236, 236, 9, 0.557);
+    background: white
+  }
+}
+
+
+h1 {
+  color: #fff;
+  font-size: min(12.2807vw, 35px);
+  font-weight: bold;
+  text-transform: capitalize;
+  padding: min(10vw, 30px);
+  margin-top: 30px;
+}
+
+/* ↓タイマー表示セクション */
+#displyTime {
+  font-size: clamp(30px, 8.9655vw, 52px);
+  margin-top: min(6.5vw, 30px);
+  margin-bottom: min(6.5vw, 30px);
+  line-height: clamp(20px, 24vw, 100px);
+  text-shadow: 0px 0px 10px #2cd7c9, 0px 0px 10px #2cd7c9, 0px 0px 10px #2cd7c9, 0px 0px 10px #2cd7c9;
+  color: #fff;
+}
+
+#displyTime span {
+  padding-left: min(4.94vw, 38px);
+  padding-right: min(4.94vw, 38px);
+}
+
+
+/* ↓入力セクション */
+.input {
+  height: clamp(50px, 10vw, 80px);
+  width: clamp(68px, 17.5vw, 140px);
+  color: #333;
+  font-size: min(7.5vw, 30px);
+  background-color: aliceblue;
+  border: solid #2cd7c9 2px;
+  box-shadow: 0px 0px 7px 2px #2cd7c9;
+  border-radius: 10px;
+  margin: 28px min(1.8vw, 6px);
+}
+
+/* ↓ボタンセクション */
+.btn {
+  font-size: clamp(10px, 2.3vw, 14px);
+  text-transform: capitalize;
+  font-weight: bold;
+  color: #fff;
+  padding: auto;
+  height: clamp(22px, 6vw, 32px);
+  width: clamp(48px, 12vw, 70px);
+  border: solid #2cd7c9 2px;
+  box-shadow: 0px 0px 7px 2px #2cd7c9;
+  border-radius: 10px;
+  margin: min(1.2vw, 10px);
+}
+
+.btn:hover {
+  font-size: 0.9rem;
+}
+
+.btn:active {
+  font-size: 0.8rem;
+}
+
+#startbtn {
+  border: solid skyblue 2px;
+  box-shadow: 0px 0px 7px 2px skyblue;
+}
+
+.b-color {
+  background-color: #aaa;
+}
+
+#stopbtn {
+  border: solid #f71612 2px;
+  box-shadow: 0px 0px 7px 2px #f71612;
+}
+
+#resetbtn {
+  border: solid green 2px;
+  box-shadow: 0px 0px 7px 2px green;
+}
+
+
+/***** ↓未入力の時用の設定ここから *****/
+.message-block {
+  position: relative;
+  display: inline;
+}
+
+p#not-entered-message {
+  display: none;
+  position: absolute;
+  bottom: -80px;
+  left: 3%;
+  transform: translateX(-30%);
+  z-index: 1;
+  background: #f5a3a3;
+  padding: 4px 12px;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  animation: fadeIn 0.6s;
+  width: min(37.9310vw, 220px);
+  color: #FFF;
+  border-radius: 3px;
+  filter: drop-shadow(0px 1px 4px #aaa);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+p#not-entered-message:before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -8px;
+  border: 8px solid transparent;
+  border-bottom: 8px solid #f5a3a3;
+}
+
+/***** ↑未入力の時用の設定ここまで**** */

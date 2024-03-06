@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- ファビコン -->
+  <link rel="icon" href="img/timer.png" type="image/png+xml">
+  <!-- ファビコン非表示用 -->
+  <link rel="icon altenate" href="img/timer.png" type="image/png+xml">
+  <title>challengeTimer</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body id="body">
+  <div>
+
+    <h1>countdown timer</h1>
+    <!-- ↓タイマー表示セクション -->
+    <div>
+      <p id="displyTime"><span id="hour">00</span>:<span id="min">00</span>:<span id="sec">00</span></p>
+    </div>
+    <!-- ↑タイマー表示セクション -->
+
+    <!-- ↓入力セクション -->
+    <div>
+      <input type="text" id="input_h" class="input" placeholder="h"
+        oninput="value = value.replace(/[０-９]/g,s => String.fromCharCode(s.charCodeAt(0) - 65248)).replace(/\D/g,'');">
+      <input type="text" id="input_m" class="input" placeholder="m"
+        oninput="value = value.replace(/[０-９]/g,s => String.fromCharCode(s.charCodeAt(0) - 65248)).replace(/\D/g,'');">
+      <input type="text" id="input_s" class="input" placeholder="s"
+        oninput="value = value.replace(/[０-９]/g,s => String.fromCharCode(s.charCodeAt(0) - 65248)).replace(/\D/g,'');">
+    </div>
+    <!-- ↑入力セクション -->
+
+    <!-- ↓ボタンセクション -->
+    <div>
+      <div class="message-block">
+        <button id="startbtn" class="btn b-color">start</button>
+        <p id="not-entered-message">数字を入力してから<br>Startボタンを押してください</p>
+      </div>
+      <button id="stopbtn" class="btn b-color">stop</button>
+      <button id="resetbtn" class="btn">reset</button>
+    </div>
+    <!-- ↑ボタンセクション -->
+
+  </div>
+
+  <script src="JavaScript/main.js"> </script>
+</body>
+
+</html>

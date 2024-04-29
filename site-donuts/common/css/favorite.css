@@ -1,0 +1,214 @@
+@charset "UTF-8";
+
+body {
+  margin: 0 auto;
+  color: #7F5539;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pc_only {
+  display: none;
+}
+
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* パンくずメニュー・ようこそ */
+.breadcrumb,
+.user_name {
+  font-size: 12px;
+  line-height: 3;
+  padding-left: 20px;
+}
+
+/* 見出しの設定 */
+main h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 60px;
+}
+
+/* 内容部分の設定 */
+.content {
+  width: 295px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 80px;
+}
+
+/* 内容：フレーム内の設定 */
+.content_inner {
+  width: min(100%, 420px);
+  text-align: center;
+  padding: 20px 12px;
+  margin: 20px auto 60px auto;
+}
+
+.content_flame {
+  width: min(100%, 420px);
+  border: 1px solid#E8C2CA;
+}
+
+/* お気に入り一覧 */
+
+.img_link {
+  margin-bottom: 20px;
+}
+
+.product_photo {
+  width: min(100%, 420px);
+  margin-bottom: 20px;
+}
+
+.product_name {
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.product_price {
+  color: #BF0000;
+}
+
+/* カートボタン作成・調整 */
+.btn_cart[type="submit"] {
+  display: inline-block;
+  background: #7F5539;
+  color: #fff;
+  width: 200px;
+  height: 36px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* お気に入り登録　favorite-insert */
+/* お気に入り一覧を見る */
+.message {
+  font-size: 14px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.message a {
+  border-bottom: 1px solid #7F5539;
+  padding-bottom: 4px;
+}
+
+.memo {
+  font-size: 14px;
+  border-bottom: 1px solid #7F5539;
+  padding-bottom: 4px;
+  width: min(89.5%, 420px);
+}
+
+/* お気に入りから削除 */
+.favorite_delete {
+  width: 200px;
+  text-align: center;
+  display: inline-block;
+  border-bottom: 1px solid #7F5539;
+  padding-bottom: 4px;
+  margin: 20px auto;
+}
+
+.textalign_right {
+  text-align: right;
+}
+
+.textalign_center {
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .sp_only {
+    display: none;
+  }
+
+  .pc_only {
+    display: block;
+  }
+
+  .content_flex {
+    display: flex;
+    width: min(89.5%, 1040px);
+    text-align: left;
+    /* padding: 20px 12px; */
+    margin: 20px auto 60px auto;
+    justify-content: center;
+    column-gap: min(1.9230vw, 20px);
+  }
+
+  .content {
+    width: min(80%, 760px)
+  }
+
+  .content_inner {
+    width: min(100%, 760px);
+    text-align: center;
+    padding: 20px 12px;
+    margin: 20px auto 60px auto;
+  }
+
+  .content_1 {
+    flex-basis: 37%;
+    width: min(32.2115vw, 330px);
+  }
+
+  .content_2 {
+    flex-basis: 63%;
+    flex-grow: 1;
+    text-align: left;
+  }
+
+  .content_2_inner {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #E8C2CA;
+    border-bottom: 1px solid #E8C2CA;
+  }
+
+  .product_photo {
+    width: min(100%, 280px);
+    margin-bottom: 20px;
+  }
+
+  .product_name {
+    font-size: min(2.3076vw, 24px);
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .product_price {
+    font-size: min(2.3076vw, 24px);
+  }
+
+  /* カートボタン作成・調整 */
+  .btn_cart[type="submit"] {
+    width: 160px;
+    height: 52px;
+    font-size: 14px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 20px;
+  }
+
+  /* お気に入りから削除の文字 */
+  .favorite_delete {
+    width: 160px;
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    border-bottom: 1px solid #7F5539;
+    padding-bottom: 4px;
+    margin: 20px auto;
+  }
+}

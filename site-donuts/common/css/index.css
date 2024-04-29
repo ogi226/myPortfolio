@@ -1,0 +1,575 @@
+@charset "utef-8";
+
+/* 全体設定 */
+body {
+  font-family: Noto sans JP, sans-serif;
+  color: #7F5539;
+}
+
+.pc_only {
+  display: none;
+}
+
+/* ようこそ部分 */
+.user_name {
+  max-width: 1200px;
+  font-size: 12px;
+  line-height: 3;
+  padding-left: 20px;
+  font-weight: 500;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* メインエリア */
+/* TOP画像 */
+.hero_img {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/********** cont-1（SP） ********** /
+/* 商品紹介 */
+.dounts_content {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/* 158/375 from　フィグマ */
+.dounts_line {
+  position: relative;
+  font-size: 12px;
+  flex-basis: 42%
+}
+
+/* サマーシトラス画像サイズ・幅調整 */
+.dount_img01 img {
+  width: max(42.1333vw, 158px);
+  margin-top: 20px;
+}
+
+/* 新商品文字と背景の〇は別に作成 */
+.dounts_line p:nth-of-type(3) {
+  font-size: clamp(12px, 3.2vw, 20px);
+  position: absolute;
+  top: clamp(38px, 10.1333vw, 48px);
+  left: clamp(10px, 2.666vw, 12px);
+  color: #fff;
+  z-index: 1;
+}
+
+/* 新商品の背景の〇と文字を重ねる */
+.dounts_line p:nth-of-type(4) {
+  position: absolute;
+  top: 26px;
+  left: 8px;
+  width: max(10.6666vw, 40px);
+  height: max(10.6666vw, 40px);
+  border-radius: 50%;
+  background: #FF8877;
+}
+
+/* サマーシトラス画像に文字を固定 */
+.dounts_line p:nth-of-type(2) {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: max(3.2vw, 12px);
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 画像サイズを調整。2カラム。画像に文字固定にするための基準*/
+.dounts_line_2 {
+  position: relative;
+  flex-basis: 42%;
+}
+
+
+/* ドーナッツのある生活画像に文字を固定 */
+.dounts_line_2 p:nth-of-type(2) {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: max(3.2vw, 12px);
+  font-weight: 700;
+  color: #fff;
+}
+
+/* 画像サイズ指定 */
+.dounts_img01 {
+  width: 100%;
+}
+
+
+
+/* ドーナッツのある生活画像サイズ・幅調整 */
+.dounts_img02 img {
+  width: max(42.1333vw, 158px);
+  margin-top: 20px;
+}
+
+.dounts_line_3 {
+  width: max(89.3333vw, 335px);
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* 商品一覧の画像・幅・位置調整 */
+.product_img {
+  margin: 20px auto;
+  /* text-align: center; */
+}
+
+/* 商品一覧画像size */
+.product_img img {
+  width: max(89.3333vw, 335px);
+}
+
+/* .dounts_line_3 img {
+  position: relative;
+} */
+
+/* 商品一覧文字位置固定 */
+.dounts_line_3 p:nth-of-type(2) {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  font-size: max(3.2vw, 12px);
+  font-weight: 700;
+  color: #7F5539;
+}
+
+/********** cont-2（SP） ********** /
+/* 会社理念？ */
+.philosophy_content {
+  position: relative;
+  width: 100%;
+}
+
+/*  画像size調整*/
+.philosophy_img img {
+  max-width: 100%;
+  width: 100%;
+}
+
+/* 画像文字色指定 */
+.philosophy_text {
+  color: #fff;
+}
+
+/* 画像に文字を重ねる　文字列① */
+.philosophy_text p:nth-of-type(1) {
+  position: absolute;
+  top: max(26.6666vw, 100px);
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  font-size: max(6.4vw, 24px);
+  font-weight: 900;
+  line-height: 1.5;
+  text-align: center;
+}
+
+/* 画像に文字を重ねる　文字列②*/
+.philosophy_text p:nth-of-type(2) {
+  position: absolute;
+  top: max(38.4vw, 144px);
+  right: 0;
+  left: 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: max(4.2666vw, 16px);
+}
+
+/* 画像に文字を重ねる　文字列③*/
+.philosophy_text p:nth-of-type(3) {
+  position: absolute;
+  top: max(58.6666vw, 220px);
+  right: 0;
+  left: 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: max(5.3333vw, 20px);
+}
+
+/* 画像に文字を重ねる　文字列④ */
+.philosophy_text p:last-of-type {
+  position: absolute;
+  top: max(67.2vw, 252px);
+  right: 0;
+  left: 0;
+  text-align: center;
+  line-height: 1.5;
+  font-size: max(4.2666vw, 16px);
+}
+
+/********** cont-3（SP） ********** /
+/* ランキング全体 */
+.ranking {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding-left: 20px;
+  padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 人気ランキングタイトル */
+.ranking_title {
+  text-align: center;
+}
+
+/* 商品紹介サイズ調整 */
+.ranking_item {
+  flex-basis: 42%;
+  flex-grow: 1;
+  margin-bottom: 80px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ranking_wrap {
+  width: max(42.1333vw, 158px);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+div h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 32px;
+  margin-bottom: 72px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 6px 8px 6px;
+
+  text-decoration: underline 4px #FFD233;
+  text-underline-offset: 8px;
+}
+
+/* ランキング数字 */
+.ranking_item h5 {
+  width: 35px;
+  height: 35px;
+  background: #E8C2CA;
+  color: #fff;
+  text-align: center;
+  margin-right: auto;
+  margin-left: auto;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+}
+
+/* ランキング画像のサイズ調整 */
+.ranking_item p img {
+  max-width: 100%;
+}
+
+.product_photo {
+  /* width: min(320px); */
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.ranking_text {
+  line-height: 1.6;
+}
+
+/* 商品紹介を２カラムに */
+.inner_flex {
+  width: max(41.8666vw, 157px);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  height: 20px;
+  /* padding-left: 5px;
+  padding-right: 5px; */
+}
+
+/* 金額 */
+.price {
+  color: #BF0000;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+/* ハートの設定 */
+.favorite_icon {
+  width: 28px;
+}
+
+/* カートボタン作成・調整 */
+.ranking .ranking_item .btn_cart[type="submit"] {
+  background: #7F5539;
+  color: #fff;
+  width: 100%;
+  height: 36px;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* ランキング１位色指定 */
+.ranking_item:nth-of-type(1) h5 {
+  background: #FFD233;
+}
+
+.ranking a {
+  cursor: pointer;
+}
+
+/* ///////////////////////////////////////////////////////////////////////////////
+
+スマホ→PC版
+
+/////////////////////////////////////////////////////////////////////////////// */
+
+
+@media screen and (min-width:768px) {
+
+  /* * {
+    outline: 1px solid #c00c0c;
+  } */
+
+  .pc_only {
+    display: block;
+  }
+
+  .sp_only {
+    display: none;
+  }
+
+  /* メインエリア */
+  /* TOP画像 */
+  .hero_img {
+    width: 100%;
+    /* height: 593px; */
+    /* padding-top: 80px; */
+    /* padding-bottom: 80px; */
+  }
+
+  /********** cont-1（PC） **********/
+  .cont-1 {
+    width: min(86.6666vw, 1040px);
+    margin: 80px auto;
+  }
+
+  /* １. サマーシトラス部分 (左上)dounts_line */
+  .dounts_line {
+    flex-basis: 36%
+  }
+
+  /* ・サマーシトラス画像 */
+  .dount_img01 img {
+    width: min(41.6666vw, 500px);
+    margin-top: 0px;
+  }
+
+  /* ・新商品文字設定 */
+  .dounts_line p:nth-of-type(3) {
+    font-size: clamp(20px, 2.666vw, 32px);
+    top: clamp(48px, 5.5558vw, 66.67px);
+    left: clamp(12px, 2.7775vw, 33.33px);
+    font-weight: 500;
+  }
+
+  /* 新商品の背景の〇設定 */
+  .dounts_line p:nth-of-type(4) {
+    position: absolute;
+    top: 10.42px;
+    left: 10.42px;
+    width: clamp(80px, 12.1525vw, 145.83px);
+    height: clamp(80px, 12.1525vw, 145.83px);
+  }
+
+  /* ・サマーシトラス文字設定 */
+  .dounts_line_2 p:nth-of-type(2),
+  .dounts_line p:nth-of-type(2) {
+    bottom: 10.42px;
+    right: min(1.6666vw, 10.42px);
+    font-size: clamp(24px, 3vw, 36px);
+  }
+
+  /* ２. サマーシトラス部分 (右上)dounts_line_2 */
+  .dounts_line_2 {
+    flex-basis: 36%;
+  }
+
+  .dounts_img02 img {
+    width: min(41.6666vw, 500px);
+    margin-top: 0px;
+    margin-left: min(1.6666vw, 20px);
+  }
+
+  /* ３. 商品紹介部分 (下)dounts_line_3 */
+  .dounts_line_3 {
+    width: min(86.6666vw, 1040px);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+  }
+
+  .product_img {
+    margin: 0;
+  }
+
+  .product_img img {
+    margin-top: 40px;
+    width: min(86.6666vw, 1040px);
+  }
+
+  /* ・商品一覧の文字設定 */
+  .dounts_line_3 p:nth-of-type(2) {
+    position: absolute;
+    font-size: clamp(24px, 3vw, 36px);
+  }
+
+
+  /********** cont-2 (PC)********** /
+/* 画像に文字を重ねる　文字列① */
+  .philosophy_text p:nth-of-type(1) {
+    position: absolute;
+    top: min(16.6666vw, 200px);
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    font-size: min(3vw, 36px);
+    font-weight: 900;
+    line-height: 1.5;
+    text-align: center;
+  }
+
+  /* 画像に文字を重ねる　文字列②*/
+  .philosophy_text p:nth-of-type(2) {
+    position: absolute;
+    top: min(21.3333vw, 256px);
+    right: 0;
+    left: 0;
+    text-align: center;
+    line-height: 1.5;
+    font-size: min(1.6666vw, 20px);
+  }
+
+  /* 画像に文字を重ねる　文字列③*/
+  .philosophy_text p:nth-of-type(3) {
+    position: absolute;
+    top: min(26.3333vw, 316px);
+    right: 0;
+    left: 0;
+    text-align: center;
+    line-height: 1.5;
+    font-size: min(2vw, 24px);
+  }
+
+  /* 画像に文字を重ねる　文字列④ */
+  .philosophy_text p:last-of-type {
+    position: absolute;
+    top: min(30vw, 360px);
+    right: 0;
+    left: 0;
+    text-align: center;
+    line-height: 1.5;
+    font-size: min(2vw, 24px);
+  }
+
+  /********** cont-3 (PC)********** /
+/* .ranking > .ranking_item > .ranking_wrap */
+  /* ランキング */
+  .ranking {
+    max-width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 商品紹介サイズ調整 */
+  .ranking_item {
+    flex-basis: 29.6296%;
+  }
+
+  .ranking_wrap {
+    width: min(26.6666vw, 320px);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* 人気ランキング 見出し*/
+  main h1 {
+    font-size: 32px;
+    margin-top: 80px;
+    margin-bottom: 80px;
+    padding: 0 8px 12px 8px;
+    text-decoration: underline 4px #FFD233;
+    text-underline-offset: 16px;
+  }
+
+  /* ランキング数字 */
+  .ranking_item h5 {
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: 500;
+    padding: 0;
+    line-height: 2.5;
+  }
+
+  /* ランキング画像 */
+  .product_photo {
+    width: min(26.6666vw, 320px);
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* ランキング商品名 */
+  .ranking_text {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .ranking form {
+    text-align: center;
+  }
+
+  /* 金額＆お気に入り */
+  .inner_flex {
+    width: min(26.6666vw, 320px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 20px;
+    /* padding-left: 5px;
+    padding-right: 5px; */
+  }
+
+  /* カートボタン作成・調整 */
+  .ranking .ranking_item .btn_cart[type="submit"] {
+    width: min(21.6666vw, 260px);
+    height: 52px;
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+}
+
+@media screen and (min-width: 1200px) {}

@@ -1,0 +1,115 @@
+@charset "utf-8";
+
+/* JS用のCSS　記述 */
+/* **********************JSのスライドイン用************ */
+.slideIn {
+    /* box-shadow: 0 3px 6px rgba(0, 0, 0, .16); */
+    transform: translateY(20px);
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.show:nth-of-type(1),
+.show:nth-of-type(5) {
+    animation: slideinTop 1s 1;
+}
+
+.show:nth-of-type(2),
+.show:nth-of-type(6) {
+    animation: slideinBottom 1s 1;
+}
+
+.show:nth-of-type(3) {
+    animation: slideinLeft 1s 1;
+}
+
+.show:nth-of-type(4) {
+    animation: slideinRight 1s 1;
+}
+
+@keyframes slideinTop {
+    0% {
+        transform: translateY(-1000px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideinBottom {
+    0% {
+        transform: translateY(1000px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideinLeft {
+    0% {
+        transform: translateX(-1000px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideinRight {
+    0% {
+        transform: translateX(1000px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* *********************JSスライドイン終わり** */
+
+/* JS用　マウスストーカー****************************************** */
+#stalker {
+    pointer-events: none;
+    position: fixed;
+    top: -8px;
+    left: -8px;
+    width: 32px;
+    height: 32px;
+    background: url(../images/donut-svgrepo-com.svg) no-repeat center center/cover;
+    border-radius: 50%;
+    transition: transform 0.2s, top, 0.5s, left 0.5s, width .5s, height .5s, background-color .5s;
+    transition-timing-function: ease-out;
+    z-index: 999;
+
+    &.hov_ {
+        /* top: -32px;
+      left: -32px;
+      width: 64px;
+      height: 64px; */
+        transition: .5s;
+        opacity: 0;
+        /* background: rgba(255, 0, 0, 0.4); */
+    }
+}
+
+/* JS用２　CSS終わり******************************************** */
+
+
+
+
+
+body {
+    margin: 0;
+
+    font-family: "Noto Sans JP", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+}

@@ -1,0 +1,169 @@
+@charset "UTF-8";
+
+body {
+  color: #7F5539;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* ロゴの設定 */
+main img {
+  width: 70px;
+  padding-left: 17px;
+  padding-top: 14px;
+}
+
+/* 見出しの設定 */
+main h1 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* 内容部分の設定 */
+/* メールアドレス・パスワード・ボタン・メモ */
+.content {
+  width: 295px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 内容：フォーム内の設定 */
+/* メールアドレス・パスワード・ボタン */
+.content_inner {
+  border: 2px solid #E8C2CA;
+  padding-top: 20px;
+  padding-left: 12px;
+  padding-right: 12px;
+  margin-bottom: 80px;
+}
+
+/* 内容：項目名の設定 */
+h2 {
+  font-size: 12px;
+}
+
+/* 内容：必須の設定 */
+.must {
+  color: #BF0000;
+}
+
+main input {
+  width: 100%;
+  height: 20px;
+  border: 1px solid #7F5539;
+  padding-left: 5px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+main .mini-input {
+  width: 40.6779%;
+}
+
+/* 内容：入力値の表示設定 */
+.input_result {
+  width: 100%;
+  height: 20px;
+  color: #333333;
+  border-left: 1px solid #7F5539;
+  margin-top: 8px;
+  margin-bottom: 20px;
+  padding-left: 5px;
+}
+
+/* 内容：入力値のエラー設定 */
+.input_error {
+  color: #BF0000;
+}
+
+.test {
+  border: none;
+  border-left: 1px solid #7F5539;
+}
+
+.display_btn {
+  font-size: 10px;
+  padding: 1px 4px;
+  border: 1px solid #7F5539;
+  border-radius: 2px;
+}
+
+/* パスワード表示・非表示 */
+.pass_display {
+  display: none;
+}
+
+/* 内容：テキストの設定 */
+.message {
+  font-size: 12px;
+  color: #333333;
+}
+
+.caution {
+  font-size: 8px;
+  color: #BF0000;
+  margin-top: 8px;
+}
+
+/* 内容：ログインボタンの設定 */
+.login_btn {
+  width: 67.7966%;
+  font-size: 16px;
+  height: 48px;
+  color: #ffffff;
+  background-color: #7F5539;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+
+.back_btn {
+  background-color: #BF0000;
+}
+
+.confirm_back_btn {
+  background-color: #BF0000;
+  margin-bottom: 20px;
+}
+
+/* 内容：メモの設定 */
+.memo {
+  font-size: 12px;
+  margin-top: 12px;
+  display: inline-block;
+  border-bottom: 1px solid #7F5539;
+}
+
+.textalign_right {
+  text-align: right;
+}
+
+.textalign_center {
+  text-align: center;
+}
+
+/* 完了画面時の設定 */
+.complete_content_inner {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  margin-bottom: 416px;
+}
+
+
+@media screen and (min-width: 1200px) {
+
+  /* 1200px以上に適用（PC固定用） */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  main {
+    max-width: 1200px;
+    padding: 0;
+  }
+}

@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+body {
+  color: #7F5539;
+  font-size: 12px;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+p#input_delete {
+  color: #333333;
+  margin: 24px 20px;
+}
+
+main ul {
+  display: flex;
+  margin: 12px 0 12px 20px;
+
+  color: #7F5539;
+}
+
+main p.id_name_no_cart {
+  margin: 12px 0 12px 20px;
+}
+
+
+
+main div#merchandise {
+  width: 89.5%;
+  /* 335/375=0.89 */
+  text-align: center;
+  margin: 20px auto 60px auto;
+
+}
+
+main div#merchandise a#img_link {
+  width: 100%;
+
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+main div#merchandise a#img_link img {
+  width: 100%;
+  height: 100%;
+
+}
+
+main div#merchandise a#name_link p#name {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+
+main div#merchandise a#price_link p#price {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #BF0000;
+}
+
+
+
+
+main div#merchandise p.count {
+  font-size: 16px;
+  margin-bottom: 16px;
+  color: #333333;
+}
+
+main div#merchandise div#detail div.price p.hidden {
+  display: none;
+}
+
+
+main div#merchandise div#detail div.price input[type=number] {
+  width: 10%;
+  border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+  padding-bottom: 4px;
+}
+
+main div#merchandise div#detail div.price input[type=submit] {
+  padding: 2px 5px;
+
+  font-size: 10px;
+  margin-bottom: 5px;
+
+  background: rgba(141, 139, 139, 0.3);
+  border: 1px solid #8d8b8b;
+  border-radius: 15px;
+  box-shadow: 3px 3px 3px #989796,
+    -3px -3px 3px #989796,
+    -3px 3px 3px #989796,
+    3px -3px 3px #989796;
+
+
+}
+
+main div#merchandise a#delete {
+  color: #7F5539;
+  border-bottom: 0.5px solid #7F5539;
+
+  padding-bottom: 4px;
+  margin-left: 15px;
+}
+
+
+
+main div#total {
+  text-align: center;
+  border: 2px solid #FFD233;
+  width: 89%;
+  /* 335/375= 0.89*/
+
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+
+main div#total ul {
+  display: flex;
+  justify-content: center;
+
+  margin: 35px 0 20px 0;
+}
+
+main div#total ul li:first-of-type {
+  color: #7F5539;
+
+}
+
+main div#total ul li {
+  font-size: 16px;
+  color: #BF0000;
+
+}
+
+main div#total p a {
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 12px 32px;
+  margin: 0;
+  margin-bottom: 38px;
+  background-color: #BF0000;
+}
+
+main p#continue {
+  text-align: center;
+}
+
+main p#continue a {
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #7F5539;
+  padding: 12px 32px;
+  margin-bottom: 80px;
+}
+
+
+
+@media screen and (min-width: 767px) {
+
+  p#input_delete {
+    font-weight: medium;
+    margin: 24px 0px 60px 103px;
+  }
+
+  /* 1200px以上に適用（PC固定用） */
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+  }
+
+  main ul {
+    margin: 12px 0 12px 103px;
+  }
+
+  main p.id_name_no_cart {
+    margin: 12px 0 12px 103px;
+  }
+
+  main div#merchandise {
+    width: 87%;
+    /* 1040/1200-=0.866 */
+    text-align: center;
+    margin: 80px auto 80px auto;
+
+    display: flex;
+  }
+
+  main div#merchandise a#img_link {
+    width: 47.5%;
+
+  }
+
+  main div#merchandise a#img_link img {
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  main div#merchandise div#detail {
+    width: 100%;
+    text-align: left;
+  }
+
+  main div#merchandise div#detail div.price {
+    display: flex;
+    justify-content: space-between;
+    text-align: right;
+  }
+
+  main div#merchandise div#detail div.price p.hidden {
+    display: block;
+  }
+
+  main div#merchandise div#detail div.price input[type=number] {
+    width: 30%;
+    border-bottom: 1px solid rgba(51, 51, 51, 0.5);
+    padding-bottom: 4px;
+  }
+
+  main div#merchandise div#detail div.price input[type=submit] {
+    font-size: 15px;
+  }
+
+  main div#merchandise a#name_link {
+    display: inline-block;
+    margin-left: 40px;
+    width: 100%;
+  }
+
+  main div#merchandise a#name_link p#name {
+    font-size: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #E6CCB2;
+
+    margin: 4px auto 0px 0;
+    padding-bottom: 16px;
+  }
+
+  main div#merchandise a#price_link {
+    display: inline-block;
+    margin-left: 40px;
+  }
+
+  main div#merchandise a#price_link p#price {
+    font-size: 24px;
+
+    margin: 30px 0 16px 0;
+    color: #BF0000;
+  }
+
+  main div#merchandise p.count {
+    font-size: 24px;
+
+    margin: 30px 0 16px 0;
+    color: #333333;
+  }
+
+  main div#merchandise div#delete {
+    text-align: right;
+
+    height: 40%;
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    border-bottom: 0.5px solid #E6CCB2;
+
+    padding-bottom: 15px;
+    margin-left: 40px;
+  }
+
+  main div#merchandise div#delete a {
+    font-size: 20px;
+    display: inline-block;
+    /* width: 100%; */
+    color: #7F5539;
+    border-bottom: 0.5px solid #7F5539;
+
+    padding-bottom: 0;
+    margin-left: 0;
+  }
+
+
+
+  main div#total {
+    width: 76%;
+    /* 1040/1366=0.76 */
+    text-align: center;
+    border: 2px solid #FFD233;
+
+    margin-bottom:
+      40px;
+  }
+
+  main div#total ul {
+    display: flex;
+    justify-content: center;
+
+    margin: 62px 0 40px 0;
+  }
+
+  main div#total ul li:first-of-type {
+    color: #7F5539;
+
+  }
+
+  main div#total ul li {
+    font-size: 24px;
+    color: #BF0000;
+
+  }
+
+  main div#total p a {
+    color: #FFFFFF;
+    display: inline-block;
+    padding: 16px 50px;
+    margin: 0;
+    margin-bottom: 62px;
+    background-color: #BF0000;
+
+    font-size: 20px;
+  }
+
+  main p#continue {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  main p#continue a {
+    display: inline-block;
+    color: #FFFFFF;
+    background-color: #7F5539;
+    padding: 16px 60px;
+    margin-bottom: 160px;
+  }
+}

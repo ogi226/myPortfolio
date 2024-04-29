@@ -1,0 +1,604 @@
+@charset "utf-8";
+
+
+
+/* ---------------header--------------- */
+header {
+    background-color: #EDE0D4;
+}
+
+.header_content1 {
+    display: flex;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header_content1 {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+header div#header_top {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    position: relative;
+}
+
+
+header a.logo {
+    display: block;
+    width: 16%;
+    /*60/375= 0.157*/
+    margin: 0 auto;
+    padding: 2% 0 1.5% 0;
+    /* 16/(50+16+12)=0.2 */
+    /* 12/78=0.15 */
+}
+
+header a.logo img {
+    width: 100%;
+
+}
+
+header a.heart {
+    width: 40px;
+    height: 34px;
+    position: absolute;
+    right: 96px;
+    /* 30*2+12*3=96 */
+    top: 24px;
+    cursor: pointer;
+}
+
+
+header a.heart img {
+    width: 100%;
+    height: 34px;
+}
+
+header a.login {
+    width: 40px;
+    /*40/404=0.314 */
+    height: 34px;
+    /*34/78=0.435 */
+    position: absolute;
+    right: 54px;
+    /* 30+12*2=54 */
+    top: 24px;
+    /* 24/71.09=0.337 */
+    cursor: pointer;
+}
+
+
+header a.login img {
+    width: 100%;
+    height: 34px;
+}
+
+header a.cart {
+    width: 40px;
+    height: 34px;
+    position: absolute;
+    right: 12px;
+    top: 24px;
+    cursor: pointer;
+}
+
+header a.cart img {
+    width: 40px;
+    height: 34px;
+    position: absolute;
+    cursor: pointer;
+}
+
+
+/* ------------ナビ作成 共通------------ */
+header nav div.nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 95;
+
+}
+
+header nav img {
+    width: 15%;
+    /*58.95/375= 0.157*/
+}
+
+
+nav input.menu_botan {
+    display: none;
+}
+
+nav label.menu_icon {
+
+    position: absolute;
+    left: 12.5px;
+    top: 31px;
+    padding-top: 5px;
+    height: 12px;
+    cursor: pointer;
+
+    padding: 10px 0 10px 0;
+}
+
+nav label.menu_icon span.nav_icon {
+    display: block;
+    width: 24px;
+    height: 3px;
+    background: #7F5539;
+
+    position: relative;
+    transition: background .4s ease-out;
+
+}
+
+
+nav label.menu_icon span.nav_icon::before,
+nav label.menu_icon span.nav_icon::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #7F5539;
+
+    position: absolute;
+    transition: all .4s ease-out;
+}
+
+nav label.menu_icon span.nav_icon::before {
+    top: -10px;
+
+}
+
+nav label.menu_icon span.nav_icon::after {
+    top: 10px;
+
+}
+
+nav ul.nav_menu {
+    list-style: none;
+    background: rgba(127, 85, 57, 0.75);
+    text-align: left;
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    transition: max-height 0.6s;
+    height: 768px;
+
+    text-transform: uppercase;
+    text-decoration-line: none;
+    text-decoration-thickness: 3px;
+    text-decoration-color: rgba(255, 255, 255, 0.3);
+
+}
+
+nav ul.nav_menu div {
+    width: 93%;
+    /* 351/375=0.93 */
+}
+
+nav ul.nav_menu li img {
+    /* 123.91/812=0.153 */
+    position: absolute;
+    left: 12px;
+    top: 12px;
+    max-height: 0;
+}
+
+
+nav ul.nav_menu li:first-of-type {
+    padding-top: 15%;
+    /* 123.91/812=0.153 */
+    border-bottom: none;
+}
+
+nav ul.nav_menu li {
+    border-bottom: 1px solid #ffffff;
+    color: #FFFFFF;
+    font-size: 16px;
+    margin: 0 12px;
+}
+
+nav ul.nav_menu li a {
+    display: block;
+    padding: 16px 12px;
+    color: #FFFFFF;
+    text-decoration-line: none;
+}
+
+nav ul.nav_menu li a:hover {
+    /* ナビメニューの項目にカーソルを合わせたときの設定 */
+    background: rgb(255, 255, 91);
+    color: black;
+}
+
+nav input.menu_botan:checked~ul.nav_menu {
+    /* メニューボタンをチェックした際の設定 */
+    max-height: 667px;
+    /* 最大高さ設定 */
+}
+
+nav input.menu_botan:checked~ul.nav_menu li img {
+    /* メニューボタンをチェックした際の設定 */
+    max-height: 667px;
+    /* 最大高さ設定 */
+}
+
+/* メニューのバツ表示 */
+nav input.menu_botan:checked~label.menu_icon {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0px;
+
+}
+
+
+
+
+nav input.menu_botan:checked~label.menu_icon span.nav_icon {
+
+    background: transparent;
+
+    position: absolute;
+    right: 12px;
+    top: 23px;
+    /* 26-12=42 */
+
+    padding: 12.5px 0 12.5px 0;
+    /* background: rgba(255, 255, 255, 0.5); */
+}
+
+nav input.menu_botan:checked~label.menu_icon span.nav_icon::before {
+    transform: rotate(-45deg);
+    top: 10px;
+    right: -8px;
+    width: 36.7px;
+    /* 26*1.4141356=36.7 */
+    background: #ffffff;
+    height: 5px;
+}
+
+nav input.menu_botan:checked~label.menu_icon span.nav_icon::after {
+    transform: rotate(45deg);
+    /* top: 0; */
+    right: -8px;
+    width: 36.7px;
+    background: #ffffff;
+    height: 5px;
+}
+
+/* ---ナビ作成 共通 end--- */
+
+/* ----- search ----- */
+header div#header_search {
+    background-color: #EDE0D4;
+    width: 100%;
+}
+
+header div#header_search form {
+    height: 100%;
+}
+
+header div#header_search form ul {
+    width: 100%;
+    list-style: none;
+
+    display: flex;
+
+    padding: 0;
+    margin: 0;
+
+    padding-bottom: 12px;
+}
+
+header div#header_search form ul li:first-of-type {
+    margin-left: 12px;
+
+}
+
+header div#header_search form ul li button {
+    width: 100%;
+    padding: 7.5px 8px;
+    background-color: #D9D9D9;
+    border: 1px solid #7F5539;
+}
+
+
+header div#header_search form ul li#text {
+    width: 100%;
+    margin-right: 12px;
+
+}
+
+header div#header_search form ul li input {
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    border: 1px solid #7F5539;
+}
+
+/* ----- search end ----- */
+
+@media screen and (min-width: 767px) {
+
+    header {
+        margin: 0 auto;
+        position: relative;
+    }
+
+
+
+    header a.logo {
+        width: 5%;
+        /*80/1366= 0.058*/
+        margin: 0 auto;
+        padding: 26px 0 26px 0;
+    }
+
+    header a.logo img {
+        width: 100%;
+
+    }
+
+    header a.heart {
+        width: 48px;
+        /* 48/1366= */
+        height: 60px;
+        /* 60/1366=0.043 */
+        position: absolute;
+        right: 290px;
+        /* 95*2+60*2+32+=342 */
+        top: 20px;
+        cursor: pointer;
+    }
+
+    header a.heart img {
+        width: 100%;
+        height: 60px;
+    }
+
+    header a.login {
+        width: 48px;
+        /* 48/1366= */
+        height: 60px;
+        /* 60/1366=0.043 */
+        position: absolute;
+        right: 187px;
+        /* 95+60+32+=187 */
+        top: 20px;
+        cursor: pointer;
+    }
+
+    header a.login img {
+        width: 100%;
+        height: 60px;
+    }
+
+
+    header a.cart {
+        width: 40px;
+        height: 60px;
+        position: absolute;
+        right: 95px;
+        top: 20px;
+        cursor: pointer;
+    }
+
+    header a.cart img {
+        width: 100%;
+        height: 60px;
+
+        right: 0;
+        top: 0;
+    }
+
+
+
+
+    /* ---ナビ作成 共通--- */
+    nav div.nav {
+        max-width: 1200px;
+
+    }
+
+    header nav img {
+        width: 6%;
+        /*86.93/1366= 0.063*/
+
+    }
+
+    nav label.menu_icon {
+        margin: 0 auto 0 0;
+
+
+        position: absolute;
+        left: 95px;
+        top: 30px;
+        padding-top: 5px;
+        height: 12px;
+        cursor: pointer;
+        padding: 25px 0 25px 0;
+
+    }
+
+    nav label.menu_icon span.nav_icon {
+        display: block;
+        width: 48px;
+        height: 3px;
+        position: relative;
+
+    }
+
+
+    nav label.menu_icon span.nav_icon::before {
+        top: -19.2px;
+    }
+
+    nav label.menu_icon span.nav_icon::after {
+        top: 19.2px;
+    }
+
+    nav ul.nav_menu {
+        background: rgba(127, 85, 57, 0.75);
+        max-width: 0;
+        width: 44%;
+        /* 600/1366=0.439 */
+        height: 100vh;
+
+        padding: 0;
+    }
+
+    nav ul.nav_menu div {
+        width: 67%;
+        /* 400/600=0.6666 */
+        margin: 0 auto;
+    }
+
+    nav ul.nav_menu li img {
+        position: absolute;
+        left: 8px;
+        top: 8px;
+        max-width: 0;
+
+    }
+
+
+    nav ul.nav_menu li:first-of-type {
+        padding-top: 100px;
+        /* 120-20=100 */
+    }
+
+    nav ul.nav_menu li {
+        color: #FFFFFF;
+        font-size: 24px;
+        text-shadow:
+            1px 1px 1px #7F5539,
+            -1px 1px 1px #7F5539,
+            -1px -1px 0 #7F5539,
+            1px -1px 0 #7F5539;
+    }
+
+    nav ul.nav_menu li a {
+        display: block;
+        padding: 20px 12px;
+        color: #FFFFFF;
+        text-decoration-line: none;
+    }
+
+    nav ul.nav_menu li a:hover {
+        /* ナビメニューの項目にカーソルを合わせたときの設定 */
+        background: rgb(255, 255, 91);
+        color: black;
+    }
+
+    nav input.menu_botan:checked~ul.nav_menu {
+        /* メニューボタンをチェックした際の設定 */
+        max-width: 44%;
+        /* 600/1366=0.439 */
+        max-height: 100%;
+
+    }
+
+    nav input.menu_botan:checked~ul.nav_menu li img {
+        /* メニューボタンをチェックした際の設定 */
+        max-width: 44%;
+        /* 最大幅設定 */
+    }
+
+    /* メニューのバツ表示 */
+    nav input.menu_botan:checked~label.menu_icon {
+        width: 44%;
+        /* 600/1366=0.439 */
+        left: 0;
+    }
+
+    nav input.menu_botan:checked~label.menu_icon span.nav_icon {
+
+        background: transparent;
+
+        position: absolute;
+        top: 42px;
+        /* 54-12=42 */
+    }
+
+    nav input.menu_botan:checked~label.menu_icon span.nav_icon::before {
+        transform: rotate(-45deg);
+        top: 0;
+        right: -8px;
+        width: 76.4px;
+        /* 54*1.4141356=76.36 */
+        height: 5px;
+    }
+
+    nav input.menu_botan:checked~label.menu_icon span.nav_icon::after {
+        transform: rotate(45deg);
+        top: 0;
+        right: -8px;
+        width: 76.4px;
+        height: 5px;
+    }
+
+    /* ---ナビ作成 共通 end--- */
+
+
+    /* ----- search ----- */
+    header div#header_search {
+        background-color: #B392AC;
+        width: 100%;
+        height: 64px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    header div#header_search form ul {
+        max-width: 1200px;
+        height: 100%;
+        list-style: none;
+        margin: 0 auto;
+
+        display: flex;
+        align-items: center;
+        justify-content: right;
+
+        /* padding: 0 12px 12px 12px; */
+
+        padding-bottom: 0px;
+
+    }
+
+    header div#header_search form ul li:first-of-type {
+        margin-left: 0px;
+
+    }
+
+    header div#header_search form ul li button {
+        width: 100%;
+        padding: 9px 8px;
+    }
+
+
+    header div#header_search form ul li#text {
+        width: 23%;
+        /* 320/1366=0.23 */
+        height: 63%;
+        /* 40/64=0.625 */
+        margin-right: 95px;
+
+    }
+
+    header div#header_search form ul li input {
+        width: 100%;
+        height: 100%;
+
+    }
+
+    /* ----- search end ----- */
+}
+
+
+/* -----header end----- */

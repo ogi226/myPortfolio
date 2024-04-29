@@ -1,0 +1,215 @@
+@charset "UTF-8";
+
+body {
+  margin: 0 auto;
+  color: #7F5539;
+
+  font-family: "Noto Sans JP", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+
+}
+
+.pc_only {
+  display: none;
+}
+
+main {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.content {
+  padding: 20px 20px 80px 20px;
+}
+
+/* パンくずメニュー */
+.breadcrumb,
+.user_name {
+  font-size: 12px;
+  line-height: 3;
+  padding-left: 20px;
+}
+
+/* 商品写真 */
+main img {
+  width: min(100%, 400px);
+}
+
+.product_photo {
+  /* margin: 0 auto; */
+  text-align: center;
+}
+
+/* 商品名 */
+.product_name {
+  font-weight: 700;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* 商品説明 */
+.product_info {
+  font-weight: 500;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border-top: 1px solid #E8C2CA;
+  border-bottom: 1px solid #E8C2CA;
+  line-height: 1.6;
+}
+
+/* 金額 */
+.price {
+  color: #BF0000;
+  margin-top: 20px;
+  margin-bottom: 24px;
+}
+
+/* ハートマーク */
+.favorite_icon {
+  width: 20px;
+}
+
+.form_inner {
+  position: relative;
+}
+
+/* 個数 */
+.product_count {
+  width: 56px;
+  height: 36px;
+  border: 1px solid #7F5539;
+  margin-right: 4px;
+  text-align: center;
+}
+
+
+
+.bottom_align {
+  font-weight: 500;
+  line-height: 2;
+  vertical-align: text-bottom;
+
+  position: absolute;
+  bottom: -7;
+}
+
+/* カートに入れるボタン */
+.cartin_btn {
+  font-size: 12px;
+  text-align: center;
+  width: 160px;
+  height: 36px;
+  color: #ffffff;
+  background-color: #7F5539;
+  /* margin-top: 20px; */
+  /* margin-bottom: 80px; */
+  margin-left: 24px;
+}
+
+@media screen and (min-width: 768px) {
+  .sp_only {
+    display: none;
+  }
+
+  .pc_only {
+    display: block;
+  }
+
+  .content {
+    font-size: min(2vw, 24px);
+    padding: 80px min(6.7083vw, 80.5px) 172.8px min(6.625vw, 79.5px);
+    margin: 0 auto;
+    display: flex;
+  }
+
+  .group_left {
+    /* width: min(55.93869%, 584px); */
+    width: min(51.8%, 540px);
+    /* padding-right: min(3.6666vw, 44px); */
+  }
+
+  .group_right {
+    /* width: 44.0631%; */
+    width: 48.2%;
+    padding-left: min(3.6666vw, 44px);
+  }
+
+  /* パンくずメニュー */
+  .breadcrumb,
+  .user_name {
+    font-size: 12px;
+    line-height: 3;
+    padding-left: 20px;
+  }
+
+  /* 商品写真 */
+  main img {
+    /* width: 540px; */
+    width: 100%;
+    /* padding-right: 40px; */
+  }
+
+  /* 商品説明 */
+  .product_info {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .product_photo {}
+
+  /* 商品名 */
+  .product_name {
+    padding-top: 0px;
+  }
+
+  /* 商品説明 */
+  .product_info {
+    padding-top: min(3.3333vw, 40px);
+    padding-bottom: min(3.3333vw, 40px);
+    line-height: 1.6;
+  }
+
+  /* 金額 */
+  .price {
+    margin-top: min(3.3333vw, 40px);
+    margin-bottom: min(3.3333vw, 40px);
+  }
+
+  /* ハートマーク */
+  .favorite_icon {
+    width: 24px;
+  }
+
+  /* 個数 */
+  .product_count {
+    width: min(6.67vw, 80px);
+    height: min(4.34vw, 52px);
+    margin-right: 8px;
+  }
+
+  .bottom_align {
+    font-weight: 500;
+    line-height: 2;
+    vertical-align: text-bottom;
+    transform: translate(0, 5px);
+
+    bottom: -3;
+  }
+
+  /* カートに入れるボタン */
+  .cartin_btn {
+    font-size: min(1.6666vw, 20px);
+    width: min(21.6666vw, 260px);
+    height: min(4.3333vw, 52px);
+    /* margin-top: 20px; */
+    /* margin-bottom: 80px; */
+    margin-left: min(2.6666vw, 32px);
+  }
+}
+
+
+
+@media screen and (min-width: 1200px) {}
